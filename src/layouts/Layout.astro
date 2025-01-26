@@ -1,22 +1,32 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Alipori Portfolio</title>
+  </head>
+  <body class="bg-[#070713]">
+    <!-- Fondo con bola -->
+    <div class="fixed inset-0 -z-10">
+      <div
+        class="absolute inset-0 m-auto h-[500px] w-[700px] rounded-full bg-[rgba(26,39,181,1)] opacity-90 blur-[100px]"
+      >
+      </div>
+    </div>
+
+    <!-- Contenido -->
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+  }
 </style>

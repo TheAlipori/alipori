@@ -1,0 +1,86 @@
+---
+
+---
+
+<div class="slider">
+  <div class="slide-track">
+    <div class="slide">
+      <img src="1.png" alt="" />
+    </div>
+    <div class="slide">
+      <img src="2.png" alt="" />
+    </div>
+    <div class="slide">
+      <img src="3.png" alt="" />
+    </div>
+    <div class="slide">
+      <img src="4.png" alt="" />
+    </div>
+    <div class="slide">
+      <img src="5.png" alt="" />
+    </div>
+    <div class="slide">
+      <img src="6.png" alt="" />
+    </div>
+    <div class="slide">
+      <img src="7.png" alt="" />
+    </div>
+
+    <div class="slide">
+      <img src="1.png" alt="" />
+    </div>
+    <div class="slide">
+      <img src="2.png" alt="" />
+    </div>
+    <div class="slide">
+      <img src="3.png" alt="" />
+    </div>
+    <div class="slide">
+      <img src="4.png" alt="" />
+    </div>
+    <div class="slide">
+      <img src="5.png" alt="" />
+    </div>
+    <div class="slide">
+      <img src="6.png" alt="" />
+    </div>
+    <div class="slide">
+      <img src="7.png" alt="" />
+    </div>
+  </div>
+</div>
+
+<style>
+  .slider {
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .slider .slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 14);
+  }
+
+  .slider .slide {
+    width: 200px;
+  }
+
+  .slider .slide img {
+    width: 100%;
+  }
+
+  @keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-200px * 7));
+      transform: translateX(calc(-200px * 7));
+    }
+  }
+</style>
