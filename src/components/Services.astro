@@ -7,282 +7,139 @@ import BrandIcon from "../icons/BrandIcon.astro";
 <div
   class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 text-white"
 >
-  <div
-    class="text-center max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12"
-  >
+  <div class="text-center max-w-2xl mx-auto mb-16">
     <h2
-      class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto"
+      class="bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent text-4xl md:text-5xl font-bold mb-4"
     >
-      <span class="relative inline-block">
-        <span
-          class="relative bg-gradient-to-b from-white to-gray-400 bg-clip-text font-medium text-transparent text-5xl md:text-6xl"
-          >Services</span
-        >
-      </span>
+      Services & Pricing
     </h2>
-    <p class="text-base text-white md:text-lg">
-      Transforming Ideas into Landing Pages, Visual Designs, and Brands
+    <p class="text-gray-300 text-lg">
+      Transparent packages for every business need
     </p>
   </div>
 
-  <div
-    class="grid max-w-md gap-8 row-gap-10 sm:mx-auto lg:max-w-full lg:grid-cols-3"
-  >
-    <div class="flex flex-col sm:flex-row">
-      <div class="sm:mr-4">
-        <div
-          class="flex items-center justify-center w-16 h-16 mb-4 rounded-full"
+  <div class="grid gap-8 lg:grid-cols-3">
+    <!-- Website Development Card -->
+    <div
+      class="relative group rounded-xl p-8 bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300 shadow-xl"
+    >
+      <LandingIcon class="w-16 h-16 mb-6 fill-white/80" />
+      <h3 class="text-2xl font-bold mb-4">Web Development</h3>
+
+      <div class="my-6">
+        <span
+          class="text-4xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
+          >$3,999</span
         >
-          <!-- <svg
-            class="w-12 h-12 text-white"
-            stroke="currentColor"
-            viewBox="0 0 52 52"
-          >
-            <polygon
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              fill="none"
-              points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-          </svg> -->
-          <LandingIcon class="w-12 h-12 text-white fill-white" />
-        </div>
+        <span class="text-gray-400">/one-time</span>
       </div>
-      <div>
-        <h6 class="mb-2 font-semibold leading-5">Website Development:</h6>
-        <p class="mb-3 text-sm">
-          I transform your ideas into effective, optimized landing pages
-          designed to capture attention and convert visitors into customers.
-        </p>
-        <ul class="mb-4 -ml-1 space-y-2">
-          <li class="flex items-start">
-            <span class="mr-1">
-              <svg
-                class="w-5 h-5 mt-px text-purple-800"
-                stroke="currentColor"
-                viewBox="0 0 52 52"
-              >
-                <polygon
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  fill="none"
-                  points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-              </svg>
-            </span>
-            Custom Designs
-          </li>
-          <li class="flex items-start">
-            <span class="mr-1">
-              <svg
-                class="w-5 h-5 mt-px text-purple-800"
-                stroke="currentColor"
-                viewBox="0 0 52 52"
-              >
-                <polygon
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  fill="none"
-                  points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-              </svg>
-            </span>
-            Responsive & Optimized
-          </li>
-          <li class="flex items-start">
-            <span class="mr-1">
-              <svg
-                class="w-5 h-5 mt-px text-purple-800"
-                stroke="currentColor"
-                viewBox="0 0 52 52"
-              >
-                <polygon
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  fill="none"
-                  points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-              </svg>
-            </span>
-            Conversion Focused
-          </li>
-        </ul>
-        <!-- <a
-          href="/"
-          aria-label=""
-          class="inline-flex items-center font-semibold transition-colors duration-200 text-purple-800 hover:text-purple-950"
-          >Learn more
-        </a> -->
-      </div>
+
+      <ul class="space-y-3 mb-8 text-gray-300">
+        <li class="flex items-center gap-3">
+          <span class="text-purple-500 text-xl">✓</span>
+          Fully Responsive Design
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="text-purple-500 text-xl">✓</span>
+          SEO Optimized + Analytics
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="text-purple-500 text-xl">✓</span>
+          Hosting & Domain Setup
+        </li>
+      </ul>
+
+      <a
+        href="#contact"
+        class="inline-block w-full py-3 text-center font-medium bg-purple-800/50 hover:bg-purple-800 rounded-lg transition-colors"
+      >
+        Start Project →
+      </a>
     </div>
 
-    <!-- card 2 -->
-    <div class="flex flex-col sm:flex-row">
-      <div class="sm:mr-4">
-        <div
-          class="flex items-center justify-center w-16 h-16 mb-4 rounded-full"
+    <!-- UI/UX Design Card -->
+    <div
+      class="relative group rounded-xl p-8 bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300 shadow-xl"
+    >
+      <CelIcon class="w-16 h-16 mb-6 fill-white/80" />
+      <h3 class="text-2xl font-bold mb-4">UI/UX Design</h3>
+
+      <div class="my-6">
+        <span
+          class="text-4xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
+          >$2,499</span
         >
-          <!-- <svg
-            class="w-12 h-12 text-white"
-            stroke="currentColor"
-            viewBox="0 0 52 52"
-          >
-            <polygon
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              fill="none"
-              points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-          </svg> -->
-          <CelIcon />
-        </div>
+        <span class="text-gray-400">/project</span>
       </div>
-      <div>
-        <h6 class="mb-2 font-semibold leading-5">UI/UX Design</h6>
-        <p class="mb-3 text-sm">
-          Crafting engaging and seamless user experiences through detailed UI/UX
-          design, using Figma to bring your ideas to life with precision and
-          creativity.
-        </p>
-        <ul class="mb-4 -ml-1 space-y-2">
-          <li class="flex items-start">
-            <span class="mr-1">
-              <svg
-                class="w-5 h-5 mt-px text-purple-800"
-                stroke="currentColor"
-                viewBox="0 0 52 52"
-              >
-                <polygon
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  fill="none"
-                  points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-              </svg>
-            </span>
-            User-Centered Designs
-          </li>
-          <li class="flex items-start">
-            <span class="mr-1">
-              <svg
-                class="w-5 h-5 mt-px text-purple-800"
-                stroke="currentColor"
-                viewBox="0 0 52 52"
-              >
-                <polygon
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  fill="none"
-                  points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-              </svg>
-            </span>
-            Prototyping & Testing
-          </li>
-          <li class="flex items-start">
-            <span class="mr-1">
-              <svg
-                class="w-5 h-5 mt-px text-purple-800"
-                stroke="currentColor"
-                viewBox="0 0 52 52"
-              >
-                <polygon
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  fill="none"
-                  points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-              </svg>
-            </span>
-            Pixel-Perfect Precision
-          </li>
-        </ul>
-        <!-- <a
-          href="/"
-          aria-label=""
-          class="inline-flex items-center font-semibold transition-colors duration-200 text-purple-800 hover:text-purple-950"
-          >Learn more
-        </a> -->
-      </div>
+
+      <ul class="space-y-3 mb-8 text-gray-300">
+        <li class="flex items-center gap-3">
+          <span class="text-purple-500 text-xl">✓</span>
+          Interactive Prototypes
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="text-purple-500 text-xl">✓</span>
+          User Testing Included
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="text-purple-500 text-xl">✓</span>
+          Design System Files
+        </li>
+      </ul>
+
+      <a
+        href="#contact"
+        class="inline-block w-full py-3 text-center font-medium bg-purple-800/50 hover:bg-purple-800 rounded-lg transition-colors"
+      >
+        Get Designs →
+      </a>
     </div>
 
-    <!-- card 3 -->
+    <!-- Branding Card -->
+    <div
+      class="relative group rounded-xl p-8 bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300 shadow-xl"
+    >
+      <BrandIcon class="w-16 h-16 mb-6 fill-white/80" />
+      <h3 class="text-2xl font-bold mb-4">Branding</h3>
 
-    <div class="flex flex-col sm:flex-row">
-      <div class="sm:mr-4">
-        <div
-          class="flex items-center justify-center w-16 h-16 mb-4 rounded-full"
+      <div class="my-6">
+        <span
+          class="text-4xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
+          >$4,999</span
         >
-          <BrandIcon />
-        </div>
+        <span class="text-gray-400">/package</span>
       </div>
-      <div>
-        <h6 class="mb-2 font-semibold leading-5">Branding</h6>
-        <p class="mb-3 text-sm">
-          Developing strong brand identities that resonate with your audience,
-          from logo design to complete brand guidelines, ensuring consistency
-          across all platforms.
-        </p>
-        <ul class="mb-4 -ml-1 space-y-2">
-          <li class="flex items-start">
-            <span class="mr-1">
-              <svg
-                class="w-5 h-5 mt-px text-purple-800"
-                stroke="currentColor"
-                viewBox="0 0 52 52"
-              >
-                <polygon
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  fill="none"
-                  points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-              </svg>
-            </span>
-            Logo Design & Visual Identity
-          </li>
-          <li class="flex items-start">
-            <span class="mr-1">
-              <svg
-                class="w-5 h-5 mt-px text-purple-800"
-                stroke="currentColor"
-                viewBox="0 0 52 52"
-              >
-                <polygon
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  fill="none"
-                  points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-              </svg>
-            </span>
-            Brand Guidelines
-          </li>
-          <li class="flex items-start">
-            <span class="mr-1">
-              <svg
-                class="w-5 h-5 mt-px text-purple-800"
-                stroke="currentColor"
-                viewBox="0 0 52 52"
-              >
-                <polygon
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  fill="none"
-                  points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-              </svg>
-            </span>
-            Reference
-          </li>
-        </ul>
-        <!-- <a
-          href="/"
-          aria-label=""
-          class="inline-flex items-center font-semibold transition-colors duration-200 text-purple-800 hover:text-purple-950"
-          >Learn more
-        </a> -->
-      </div>
+
+      <ul class="space-y-3 mb-8 text-gray-300">
+        <li class="flex items-center gap-3">
+          <span class="text-purple-500 text-xl">✓</span>
+          Logo + Visual Identity
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="text-purple-500 text-xl">✓</span>
+          Social Media Toolkit
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="text-purple-500 text-xl">✓</span>
+          Brand Guidelines PDF
+        </li>
+      </ul>
+
+      <a
+        href="#contact"
+        class="inline-block w-full py-3 text-center font-medium bg-purple-800/50 hover:bg-purple-800 rounded-lg transition-colors"
+      >
+        Build Brand →
+      </a>
     </div>
+  </div>
+
+  <div class="mt-16 text-center">
+    <p class="text-gray-400">
+      Need custom solutions?
+      <a href="#contact" class="text-purple-400 hover:text-purple-300 underline"
+        >Let's discuss →</a
+      >
+    </p>
   </div>
 </div>

@@ -4,32 +4,78 @@ import Linkedin from "../icons/LinkedinIcon.astro";
 ---
 
 <header
-  class="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-white/0 shadow-lg py-3 backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg"
+  class="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-white/5 border-b border-white/10 shadow-2xl py-3 backdrop-blur-xl md:top-6 md:rounded-3xl lg:max-w-screen-lg transition-all duration-300 hover:bg-white/10"
 >
   <div class="px-4">
-    <div class="place-items-center md:flex items-center md:justify-between">
-      <div class="flex shrink-0">
-        <a aria-current="page" class="flex items-center" href="/">
-          <AliporiIcon class="h-16 md:h-12 w-auto fill-white" />
-          <p class="sr-only">Alipori</p>
+    <div class="flex items-center justify-between">
+      <!-- Logo con efecto hover -->
+      <a href="/" class="group flex items-center gap-2">
+        <AliporiIcon
+          class="h-14 w-14 md:h-12 md:w-12 transition-transform group-hover:scale-110 fill-purple-400"
+        />
+        <span
+          class="text-xl font-bold bg-gradient-to-r from-purple-300 to-white bg-clip-text text-transparent"
+        >
+          Alipori
+        </span>
+      </a>
+
+      <!-- Nav Items -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a
+          href="#"
+          class="relative text-sm font-medium text-white/90 hover:text-purple-300 transition-colors duration-300"
+        >
+          <span class="hover-underline-animation">Home</span>
+        </a>
+        <a
+          href="#"
+          class="relative text-sm font-medium text-white/90 hover:text-purple-300 transition-colors duration-300"
+        >
+          <span class="hover-underline-animation">Projects</span>
+        </a>
+        <a
+          href="#"
+          class="relative text-sm font-medium text-white/90 hover:text-purple-300 transition-colors duration-300"
+        >
+          <span class="hover-underline-animation">Contact</span>
+        </a>
+      </nav>
+
+      <!-- Redes Sociales -->
+      <div class="flex items-center gap-4">
+        <a
+          href="https://www.linkedin.com/in/alex-dominguez-esparza/"
+          target="_blank"
+          class="p-2 hover:bg-white/10 rounded-full transition-colors"
+        >
+          <Linkedin
+            class="w-6 h-6 fill-white hover:fill-purple-300 transition-colors"
+          />
+          <span class="sr-only">LinkedIn</span>
         </a>
       </div>
-      <div class="hidden md:flex md:items-center md:justify-center md:gap-5">
-        <a
-          aria-current="page"
-          class="inline-block rounded-lg px-2 py-1 text-sm font-medium text-white transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-          href="#">Home</a
-        >
-        <a
-          class="inline-block rounded-lg px-2 py-1 text-sm font-medium text-white transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-          href="#">Projects</a
-        >
-        <a
-          class="inline-block rounded-lg px-2 py-1 text-sm font-medium text-white transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-          href="#">Contact me</a
-        >
-      </div>
-      <div class="flex items-center justify-end gap-3"></div>
     </div>
   </div>
 </header>
+
+<style>
+  .hover-underline-animation {
+    position: relative;
+  }
+
+  .hover-underline-animation::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(45deg, #9333ea, #3b82f6);
+    transition: width 0.3s ease-out;
+  }
+
+  .hover-underline-animation:hover::after {
+    width: 100%;
+  }
+</style>

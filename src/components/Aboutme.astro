@@ -7,50 +7,58 @@ import IdIcon from "../icons/idcardIcon.astro";
 <section id="features" class="relative block px-6 py-10 md:py-20 md:px-10">
   <div class="relative mx-auto max-w-5xl text-center">
     <h2
-      class="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-medium text-transparent text-5xl md:text-6xl"
+      class="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-medium text-transparent text-4xl md:text-5xl"
     >
       About me
     </h2>
-    <p
-      class="mx-auto my-4 w-full max-w-xl bg-transparent text-center font-medium leading-relaxed tracking-wide text-white"
-    >
+    <p class="mx-auto mt-4 mb-12 max-w-xl text-gray-300 font-medium text-lg">
       A glimpse into my skills and achievements
     </p>
   </div>
 
   <div
-    class="relative mx-auto max-w-7xl z-10 grid grid-cols-1 gap-10 pt-14 sm:grid-cols-2 lg:grid-cols-3"
+    class="relative mx-auto max-w-7xl z-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
   >
+    <!-- Tarjeta 1 - Experiencia -->
     <div
-      class="rounded-md p-8 shadow text-center backdrop-blur-3xl place-items-center"
+      class="flex flex-col items-center rounded-xl p-8 bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300 h-full"
     >
-      <ExperienceIcon class="size-24 fill-white" />
-      <h3 class="mt-6 text-white text-5xl">+4</h3>
-      <h class="text-center text-white"></h>
-      <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-white">
-        years of experience
-      </p>
+      <ExperienceIcon class="w-16 h-16 mb-6 fill-white/80" />
+      <h3
+        class="text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-2"
+      >
+        +4
+      </h3>
+      <p class="text-gray-300 font-medium text-lg">Years of experience</p>
     </div>
 
+    <!-- Tarjeta 2 - Proyectos -->
     <div
-      class="rounded-md p-8 text-center shadow backdrop-blur-3xl place-items-center"
+      class="flex flex-col items-center rounded-xl p-8 bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300 h-full"
     >
-      <ProjectsIcon class="size-24 fill-white" />
-      <h3 class="mt-6 text-white text-5xl">+12</h3>
-      <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-white">
-        Projects Completed
-      </p>
+      <ProjectsIcon class="w-16 h-16 mb-6 fill-white/80" />
+      <h3
+        class="text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-2"
+      >
+        +12
+      </h3>
+      <p class="text-gray-300 font-medium text-lg">Projects Completed</p>
     </div>
 
+    <!-- Tarjeta 3 - ID Profesional -->
     <div
-      class="rounded-md p-8 text-center shadow backdrop-blur-3xl place-items-center"
+      class="flex flex-col items-center rounded-xl p-8 bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300 h-full"
     >
-      <IdIcon class="size-24 fill-white" />
-      <h3 class="mt-6 text-white text-5xl">12341293</h3>
-
-      <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-white">
-        Professional ID as an Engineer in Computer Systems with a specialization
-        in Web Development
+      <IdIcon class="w-16 h-16 mb-6 fill-white/80" />
+      <h3
+        class="text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-4"
+      >
+        14289928
+      </h3>
+      <p class="text-gray-300 font-medium text-lg leading-snug">
+        Certified Systems Engineer<br />
+        <span class="text-sm opacity-80">Specialization in Web Development</span
+        >
       </p>
     </div>
   </div>

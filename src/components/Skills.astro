@@ -12,57 +12,60 @@ import FlutterIcon from "../icons/FlutterIcon.astro";
 import WordPressIcon from "../icons/WordpressIcon.astro";
 ---
 
-<div class="max-w-3xl mx-auto px-5 mt-28">
-  <div class="flex flex-col justify-center">
+<div class="max-w-5xl mx-auto px-5 mt-28">
+  <!-- Aumenté a max-w-5xl -->
+  <div class="flex flex-col justify-center gap-8">
+    <!-- Agregué gap -->
     <div class="text-center">
       <h2
-        class="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-medium text-transparent text-5xl md:text-6xl"
+        class="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-4xl md:text-5xl"
       >
-        Skills
+        Tech Stack
       </h2>
-
-      <p class="max-w-md mx-auto text-white mt-6">
-        What powers my designs and development
+      <p class="max-w-lg mx-auto text-gray-300 mt-4 text-lg">
+        <!-- Mejor contraste -->
+        Tools & technologies I use daily
       </p>
     </div>
 
     <div
-      class="flex flex-wrap items-center justify-center gap-10 mt-2 md:justify-around"
+      class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-8 place-items-center"
     >
-      <div class="text-gray-400">
-        <ReactIcon />
+      <!-- Grid responsivo -->
+      <!-- Cada icono con hover y transición -->
+      <div class="p-4 hover:scale-110 transition-transform duration-300">
+        <ReactIcon class="w-12 h-12 text-[#61DAFB]" />
+        <!-- Color brand -->
       </div>
-      <div class="">
-        <TailwinIcon />
+      <div class="p-4 hover:scale-110 transition-transform duration-300">
+        <TailwinIcon class="w-12 h-12 text-[#38BDF8]" />
       </div>
-
-      <div class="">
-        <SanityIcon />
+      <div class="p-4 hover:scale-110 transition-transform duration-300">
+        <SanityIcon class="w-12 h-12 text-[#F03E2F]" />
       </div>
-
-      <div class="">
-        <VercelIcon />
+      <div class="p-4 hover:scale-110 transition-transform duration-300">
+        <VercelIcon class="w-12 h-12 text-white" />
       </div>
-      <div class="">
-        <FigmaIcon />
+      <div class="p-4 hover:scale-110 transition-transform duration-300">
+        <FigmaIcon class="w-12 h-12 text-[#A259FF]" />
       </div>
-      <div class="">
-        <AdobeIcon />
+      <div class="p-4 hover:scale-110 transition-transform duration-300">
+        <AdobeIcon class="w-12 h-12 text-[#FF0000]" />
       </div>
-      <div class="">
-        <AstroIcon />
+      <div class="p-4 hover:scale-110 transition-transform duration-300">
+        <AstroIcon class="w-12 h-12 text-white" />
       </div>
-      <div>
-        <JavaScriptIcon />
+      <div class="p-4 hover:scale-110 transition-transform duration-300">
+        <JavaScriptIcon class="w-12 h-12 text-[#F7DF1E]" />
       </div>
-      <div>
-        <CssIcon />
+      <div class="p-4 hover:scale-110 transition-transform duration-300">
+        <CssIcon class="w-12 h-12 text-[#2965F1]" />
       </div>
-      <div>
-        <FlutterIcon />
+      <div class="p-4 hover:scale-110 transition-transform duration-300">
+        <FlutterIcon class="w-12 h-12 text-[#02569B]" />
       </div>
-      <div>
-        <WordPressIcon />
+      <div class="p-4 hover:scale-110 transition-transform duration-300">
+        <WordPressIcon class="w-12 h-12 text-[#21759B]" />
       </div>
     </div>
   </div>
