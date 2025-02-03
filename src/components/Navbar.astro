@@ -11,34 +11,38 @@ import Linkedin from "../icons/LinkedinIcon.astro";
       <!-- Logo con efecto hover -->
       <a href="/" class="group flex items-center gap-2">
         <AliporiIcon
-          class="h-14 w-14 md:h-12 md:w-12 transition-transform group-hover:scale-110 fill-purple-400"
+          class="h-14 w-14 md:h-12 md:w-12 transition-transform group-hover:scale-110 fill-white"
         />
-        <span
-          class="text-xl font-bold bg-gradient-to-r from-purple-300 to-white bg-clip-text text-transparent"
-        >
-          Alipori
+        <span class="text-xl font-bold bg-clip-text text-white">
+          Alipori Studio
         </span>
       </a>
 
       <!-- Nav Items -->
       <nav class="hidden md:flex items-center gap-8">
         <a
-          href="#"
-          class="relative text-sm font-medium text-white/90 hover:text-purple-300 transition-colors duration-300"
+          href="/index.html"
+          class="relative text-sm font-medium text-white/90 hover:text-blue-500 transition-colors duration-300"
         >
           <span class="hover-underline-animation">Home</span>
         </a>
         <a
-          href="#"
-          class="relative text-sm font-medium text-white/90 hover:text-purple-300 transition-colors duration-300"
+          href="/#services"
+          class="relative text-sm font-medium text-white/90 hover:text-blue-500 transition-colors duration-300"
         >
           <span class="hover-underline-animation">Services</span>
         </a>
         <a
-          href="#"
-          class="relative text-sm font-medium text-white/90 hover:text-purple-300 transition-colors duration-300"
+          href="/#contact"
+          class="relative text-sm font-medium text-white/90 hover:text-blue-500 transition-colors duration-300"
         >
           <span class="hover-underline-animation">Contact</span>
+        </a>
+        <a
+          href="/projects"
+          class="relative text-sm font-medium text-white/90 hover:text-blue-500 transition-colors duration-300"
+        >
+          <span class="hover-underline-animation">Projects</span>
         </a>
       </nav>
 
@@ -50,7 +54,7 @@ import Linkedin from "../icons/LinkedinIcon.astro";
           class="p-2 hover:bg-white/10 rounded-full transition-colors"
         >
           <Linkedin
-            class="w-6 h-6 fill-white hover:fill-purple-300 transition-colors"
+            class="w-6 h-6 fill-white hover:fill-blue-500 transition-colors"
           />
           <span class="sr-only">LinkedIn</span>
         </a>
@@ -71,7 +75,7 @@ import Linkedin from "../icons/LinkedinIcon.astro";
     height: 2px;
     bottom: -4px;
     left: 0;
-    background: linear-gradient(45deg, #9333ea, #3b82f6);
+    background: linear-gradient(45deg, #6a93cf, #3b82f6);
     transition: width 0.3s ease-out;
   }
 
