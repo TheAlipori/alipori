@@ -4,16 +4,13 @@ export const lenguages ={
 }
 
 export const defaultLang = "es";
-
 export const showDefaultLang= true
 export const ui ={
-    eng:{
+    en:{
     'navbar1': 'Home',
     'navbar2': 'Services',
     'navbar3': 'Contact me',
     'navbar4': 'Projects',
-    
-
     'title':'Hi, Im Alipori ',
     'description':'Web Developer & UI/UX Designer',
     'description2':'I design attractive and functional web experiences that drive businesses forward in the digital world',
@@ -70,15 +67,12 @@ export const ui ={
     'contact10':'View cv ',
     'footer1':'Home',
     'footer2':'Contact me',
-    
-
     },
     es:{
     'navbar1': 'Inicio',
     'navbar2': 'Servicios',
     'navbar3': 'Contactame',
     'navbar4': 'Projectos',
-
     'title':'Hola, Soy Alipori ',
     'description':'Desarrollador Web & Diseñador UI/UX',
     'description2':'Diseño experiencias web atractivas y funcionales que impulsan negocios en el mundo digital',
@@ -128,15 +122,13 @@ export const ui ={
     'contact3': 'Perfil de LinkedIn',
     'contact4': 'Ver Perfil',
     'contact5': 'Chatear Directamente',
-    'contact6': 'Escríbeme por WhatsApp',
+    'contact6': 'Escríbeme',
     'contact7': 'Envíame un Correo',
     'contact8': 'Enviar Correo',
     'contact9': 'Mi CV',
     'contact10': 'Ver CV',
     'footer1':'Inicio',
     'footer2':'Contactame',
-    
-
     }
 
 } as const 
