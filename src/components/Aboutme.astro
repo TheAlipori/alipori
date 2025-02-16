@@ -2,6 +2,10 @@
 import ExperienceIcon from "../icons/experienceIcon.astro";
 import ProjectsIcon from "../icons/projectIcon.astro";
 import IdIcon from "../icons/idcardIcon.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="features" class="relative block px-6 py-10 md:py-20 md:px-10">
@@ -9,10 +13,10 @@ import IdIcon from "../icons/idcardIcon.astro";
     <h2
       class="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-medium text-transparent text-4xl md:text-5xl"
     >
-      About me
+      {t("about")}
     </h2>
     <p class="mx-auto mt-4 mb-12 max-w-xl text-gray-300 font-medium text-lg">
-      A glimpse into my skills and achievements
+      {t("about1")}
     </p>
   </div>
 
@@ -27,9 +31,9 @@ import IdIcon from "../icons/idcardIcon.astro";
       <h3
         class="text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-2"
       >
-        +4
+        +2
       </h3>
-      <p class="text-gray-300 font-medium text-lg">Years of experience</p>
+      <p class="text-gray-300 font-medium text-lg">{t("cardabout1")}</p>
     </div>
 
     <!-- Tarjeta 2 - Proyectos -->
@@ -40,9 +44,9 @@ import IdIcon from "../icons/idcardIcon.astro";
       <h3
         class="text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-2"
       >
-        +12
+        +6
       </h3>
-      <p class="text-gray-300 font-medium text-lg">Projects Completed</p>
+      <p class="text-gray-300 font-medium text-lg">{t("cardabout2")}</p>
     </div>
 
     <!-- Tarjeta 3 - ID Profesional -->
@@ -55,10 +59,9 @@ import IdIcon from "../icons/idcardIcon.astro";
       >
         14289928
       </h3>
-      <p class="text-gray-300 font-medium text-lg leading-snug">
-        Certified Systems Engineer<br />
-        <span class="text-sm opacity-80">Specialization in Web Development</span
-        >
+      <p class="text-gray-300 font-medium text-lg leading-snug text-center">
+        {t("cardabout3")}<br />
+        <span class="text-sm opacity-80">{t("cardabout4")}</span>
       </p>
     </div>
   </div>

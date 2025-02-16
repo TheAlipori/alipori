@@ -1,6 +1,10 @@
 ---
 import AliporiIcon from "../icons/AliporiIcon.astro";
 import Linkedin from "../icons/LinkedinIcon.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <header
@@ -14,7 +18,7 @@ import Linkedin from "../icons/LinkedinIcon.astro";
           class="h-14 w-14 md:h-12 md:w-12 transition-transform group-hover:scale-110 fill-white"
         />
         <span class="text-xl font-bold bg-clip-text text-white">
-          Alipori Studio
+          Pori Labs
         </span>
       </a>
 
@@ -24,25 +28,25 @@ import Linkedin from "../icons/LinkedinIcon.astro";
           href="/index.html"
           class="relative text-sm font-medium text-white/90 hover:text-blue-500 transition-colors duration-300"
         >
-          <span class="hover-underline-animation">Home</span>
+          <span class="hover-underline-animation">{t("navbar1")}</span>
         </a>
         <a
           href="/#services"
           class="relative text-sm font-medium text-white/90 hover:text-blue-500 transition-colors duration-300"
         >
-          <span class="hover-underline-animation">Services</span>
+          <span class="hover-underline-animation">{t("navbar2")}</span>
         </a>
         <a
           href="/#contact"
           class="relative text-sm font-medium text-white/90 hover:text-blue-500 transition-colors duration-300"
         >
-          <span class="hover-underline-animation">Contact</span>
+          <span class="hover-underline-animation">{t("navbar3")}</span>
         </a>
         <a
           href="/projects"
           class="relative text-sm font-medium text-white/90 hover:text-blue-500 transition-colors duration-300"
         >
-          <span class="hover-underline-animation">Projects</span>
+          <span class="hover-underline-animation">{t("navbar4")}</span>
         </a>
       </nav>
 

@@ -10,6 +10,11 @@ import JavaScriptIcon from "../icons/JavascriptIcon.astro";
 import CssIcon from "../icons/cssIcon.astro";
 import FlutterIcon from "../icons/FlutterIcon.astro";
 import WordPressIcon from "../icons/WordpressIcon.astro";
+
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="max-w-5xl mx-auto px-5 mt-28">
@@ -24,7 +29,7 @@ import WordPressIcon from "../icons/WordpressIcon.astro";
       </h2>
       <p class="max-w-lg mx-auto text-gray-300 mt-4 text-lg">
         <!-- Mejor contraste -->
-        Tools & technologies I use daily
+        {t("tech2")}
       </p>
     </div>
 

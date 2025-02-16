@@ -2,6 +2,10 @@
 import LandingIcon from "../icons/landingIcon.astro";
 import CelIcon from "../icons/celIcon.astro";
 import BrandIcon from "../icons/BrandIcon.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="services">
@@ -12,10 +16,10 @@ import BrandIcon from "../icons/BrandIcon.astro";
       <h2
         class="bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent text-4xl md:text-5xl font-bold mb-4"
       >
-        Services & Pricing
+        {t("services1")}
       </h2>
       <p class="text-gray-300 text-lg">
-        Transparent packages for every business need
+        {t("services2")}
       </p>
     </div>
 
@@ -25,28 +29,28 @@ import BrandIcon from "../icons/BrandIcon.astro";
         class="relative group rounded-xl p-8 bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300 shadow-xl"
       >
         <LandingIcon class="w-16 h-16 mb-6 fill-white/80" />
-        <h3 class="text-2xl font-bold mb-4">Web Development</h3>
+        <h3 class="text-2xl font-bold mb-4">{t("services3")}</h3>
 
         <div class="my-6">
           <span
             class="text-4xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
-            >$195</span
+            >{t("services4")}</span
           >
-          <span class="text-gray-400">/one-time</span>
+          <span class="text-gray-400">{t("services5")}</span>
         </div>
 
         <ul class="space-y-3 mb-8 text-gray-300">
           <li class="flex items-center gap-3">
             <span class="text-purple-500 text-xl">✓</span>
-            Fully Responsive Design
+            {t("services6")}
           </li>
           <li class="flex items-center gap-3">
             <span class="text-purple-500 text-xl">✓</span>
-            SEO Optimized + Analytics
+            {t("services7")}
           </li>
           <li class="flex items-center gap-3">
             <span class="text-purple-500 text-xl">✓</span>
-            Hosting & Domain Setup
+            {t("services8")}
           </li>
         </ul>
 
@@ -54,7 +58,7 @@ import BrandIcon from "../icons/BrandIcon.astro";
           href="#contact"
           class="inline-block w-full py-3 text-center font-medium bg-purple-800/50 hover:bg-purple-800 rounded-lg transition-colors"
         >
-          Start Project →
+          {t("services9")}
         </a>
       </div>
 
@@ -63,28 +67,28 @@ import BrandIcon from "../icons/BrandIcon.astro";
         class="relative group rounded-xl p-8 bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300 shadow-xl"
       >
         <CelIcon class="w-16 h-16 mb-6 fill-white/80" />
-        <h3 class="text-2xl font-bold mb-4">UI/UX Design</h3>
+        <h3 class="text-2xl font-bold mb-4">{t("services10")}</h3>
 
         <div class="my-6">
           <span
             class="text-4xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
-            >$120</span
+            >{t("services11")}</span
           >
-          <span class="text-gray-400">/project</span>
+          <span class="text-gray-400">{t("services12")}</span>
         </div>
 
         <ul class="space-y-3 mb-8 text-gray-300">
           <li class="flex items-center gap-3">
             <span class="text-purple-500 text-xl">✓</span>
-            Interactive Prototypes
+            {t("services13")}
           </li>
           <li class="flex items-center gap-3">
             <span class="text-purple-500 text-xl">✓</span>
-            User Testing Included
+            {t("services14")}
           </li>
           <li class="flex items-center gap-3">
             <span class="text-purple-500 text-xl">✓</span>
-            Design System Files
+            {t("services15")}
           </li>
         </ul>
 
@@ -92,7 +96,7 @@ import BrandIcon from "../icons/BrandIcon.astro";
           href="#contact"
           class="inline-block w-full py-3 text-center font-medium bg-purple-800/50 hover:bg-purple-800 rounded-lg transition-colors"
         >
-          Get Designs →
+          {t("services16")}
         </a>
       </div>
 
@@ -101,28 +105,29 @@ import BrandIcon from "../icons/BrandIcon.astro";
         class="relative group rounded-xl p-8 bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300 shadow-xl"
       >
         <BrandIcon class="w-16 h-16 mb-6 fill-white/80" />
-        <h3 class="text-2xl font-bold mb-4">Branding</h3>
+        <h3 class="text-2xl font-bold mb-4">{t("services17")}</h3>
 
         <div class="my-6">
           <span
             class="text-4xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
-            >$240</span
           >
-          <span class="text-gray-400">/package</span>
+            {t("services18")}
+          </span>
+          <span class="text-gray-400"> {t("services19")}</span>
         </div>
 
         <ul class="space-y-3 mb-8 text-gray-300">
           <li class="flex items-center gap-3">
             <span class="text-purple-500 text-xl">✓</span>
-            Logo + Visual Identity
+            {t("services20")}
           </li>
           <li class="flex items-center gap-3">
             <span class="text-purple-500 text-xl">✓</span>
-            Social Media Toolkit
+            {t("services21")}
           </li>
           <li class="flex items-center gap-3">
             <span class="text-purple-500 text-xl">✓</span>
-            Brand Guidelines PDF
+            {t("services22")}
           </li>
         </ul>
 
@@ -130,18 +135,20 @@ import BrandIcon from "../icons/BrandIcon.astro";
           href="#contact"
           class="inline-block w-full py-3 text-center font-medium bg-purple-800/50 hover:bg-purple-800 rounded-lg transition-colors"
         >
-          Build Brand →
+          {t("services23")}
         </a>
       </div>
     </div>
 
     <div class="mt-16 text-center">
       <p class="text-gray-400">
-        Need custom solutions?
+        {t("services24")}
+
         <a
           href="#contact"
           class="text-purple-400 hover:text-purple-300 underline"
-          >Let's discuss →</a
+        >
+          {t("services25")}</a
         >
       </p>
     </div>

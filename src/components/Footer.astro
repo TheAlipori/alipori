@@ -1,5 +1,10 @@
 ---
 import AliporiIcon from "../icons/AliporiIcon.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import SelectLang from "./SelectLang.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
@@ -29,10 +34,11 @@ import AliporiIcon from "../icons/AliporiIcon.astro";
     <div
       class="mt-8 flex items-center justify-center space-x-4 text-sm font-semibold leading-6 text-white"
     >
-      <a href="/privacy-policy">Home</a>
+      <a href="/privacy-policy">{t("footer1")}</a>
       <div class="h-4 w-px bg-slate-500/20"></div><a
-        href="https://wa.me/526183510239">Contact me</a
+        href="https://wa.me/526183510239">{t("footer2")}</a
       >
     </div>
   </div>
+  <SelectLang />
 </footer>

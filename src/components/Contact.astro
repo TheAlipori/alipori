@@ -1,3 +1,10 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <section id="contact" class="">
   <div class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -5,10 +12,10 @@
         <h2
           class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent"
         >
-          Let's Connect
+          {t("contact1")}
         </h2>
         <p class="mt-4 text-gray-300 max-w-xl mx-auto text-lg">
-          Ready to bring your digital vision to life?
+          {t("contact2")}
         </p>
       </div>
 
@@ -38,13 +45,13 @@
             </svg>
           </div>
           <h3 class="text-xl font-semibold text-white mb-4">
-            LinkedIn Profile
+            {t("contact3")}
           </h3>
           <a
             href="https://www.linkedin.com/in/alex-dominguez-esparza/"
             class="inline-flex items-center px-6 py-3 rounded-lg bg-purple-800/50 hover:bg-purple-800 transition-colors text-white"
           >
-            <span>View Profile</span>
+            <span> {t("contact4")}</span>
             <svg
               class="w-4 h-4 ml-2"
               fill="none"
@@ -81,12 +88,12 @@
               ></path>
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-white mb-4">Chat Directly</h3>
+          <h3 class="text-xl font-semibold text-white mb-4">{t("contact5")}</h3>
           <a
             href="https://wa.me/526183510239"
             class="inline-flex items-center px-6 py-3 rounded-lg bg-green-800/50 hover:bg-green-800 transition-colors text-white"
           >
-            <span>WhatsApp Me</span>
+            <span> {t("contact6")}</span>
             <svg
               class="w-4 h-4 ml-2"
               fill="none"
@@ -121,12 +128,12 @@
               ></path>
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-white mb-4">Email Me</h3>
+          <h3 class="text-xl font-semibold text-white mb-4">{t("contact7")}</h3>
           <a
             href="mailto:alipori.bot@gmail.com"
             class="inline-flex items-center px-6 py-3 rounded-lg bg-blue-800/50 hover:bg-blue-800 transition-colors text-white"
           >
-            <span>Send Email</span>
+            <span> {t("contact8")}</span>
             <svg
               class="w-4 h-4 ml-2"
               fill="none"
@@ -160,13 +167,13 @@
               <path d="M14 3v5h5"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-white mb-4">My CV</h3>
+          <h3 class="text-xl font-semibold text-white mb-4">{t("contact9")}</h3>
           <a
             href="https://aliporiportafolio.vercel.app/"
             class="inline-flex items-center px-6 py-3 rounded-lg bg-yellow-800/50 hover:bg-yellow-800 transition-colors text-white"
             download
           >
-            <span>View cv</span>
+            <span> {t("contact10")}</span>
             <svg
               class="w-4 h-4 ml-2"
               fill="none"

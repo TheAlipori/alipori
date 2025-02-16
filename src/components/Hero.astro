@@ -1,3 +1,10 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <section class="px-4 py-12 md:py-0 md:px-10">
   <div class="flex justify-center items-center min-h-screen">
     <div class="text-center max-w-2xl">
@@ -5,18 +12,17 @@
       <h1
         class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#f2f2f3] to-[#a7a7a7]"
       >
-        Hi, I'm Alipori
+        {t("title")}
       </h1>
 
       <!-- Subtítulo -->
       <h2 class="text-xl md:text-2xl text-white/90 font-medium mb-4">
-        Frontend Developer & UI/UX Designer
+        {t("description")}
       </h2>
 
       <!-- Descripción -->
       <p class="text-base md:text-lg text-white/80 mb-8">
-        Passionate about creating impactful digital experiences and driving
-        technology forward
+        {t("description2")}
       </p>
 
       <!-- Botón de contacto (enlace semántico) -->
@@ -24,7 +30,7 @@
         href="https://wa.me/526183510239"
         class="inline-block bg-white/10 backdrop-blur-lg text-white py-3 px-8 rounded-2xl shadow-lg ring-1 ring-black/5 hover:bg-white/20 transition-all duration-300"
       >
-        CONTACT ME
+        {t("button1")}
       </a>
 
       <!-- Flecha animada -->
