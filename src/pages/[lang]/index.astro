@@ -15,6 +15,8 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const titleString = t("title");
 const descriptionString = t("description");
+import { defaultLang } from "../../i18n/ui";
+Astro.redirect(`/${defaultLang}/`);
 ---
 
 <Layout>
