@@ -2,9 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 import Galeria from "../components/LandingPages.astro";
 import Rebranding from "../components/Rebranding.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import SelectLang from "../components/SelectLang.astro";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const titleString = t("title");
+const descriptionString = t("description");
+import { defaultLang } from "../i18n/ui";
+Astro.redirect(`/${defaultLang}/`);
 ---
 
-<Layout
+<Layout title="Poli Labs"
   ><Galeria />
   <Rebranding /></Layout
 >
