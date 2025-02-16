@@ -12,7 +12,18 @@ export function useTranslations(lang: keyof typeof ui) {
   }
 }
 export function useTranslatedPath(lang: keyof typeof ui) {
-  return function translatePath(path: string, l: string = lang) {
-    return !showDefaultLang && l === defaultLang ? path : `/${l}${path}`
+  return function translatePath(path: string, targetLang: string = lang) {
+    // 1. Limpiar path existente
+    const cleanPath = path.replace(new RegExp(`^/(${Object.keys(ui).join('|')})`), '');
+    
+    // 2. Normalizar formato
+    const normalizedPath = cleanPath.startsWith('/') 
+      ? cleanPath 
+      : `/${cleanPath}`;
+
+    // 3. Construir ruta final
+    return !showDefaultLang && targetLang === defaultLang
+      ? normalizedPath
+      : `/${targetLang}${normalizedPath}`;
   }
 }

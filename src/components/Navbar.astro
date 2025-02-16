@@ -1,10 +1,16 @@
 ---
 import AliporiIcon from "../icons/AliporiIcon.astro";
 import Linkedin from "../icons/LinkedinIcon.astro";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
+import { languages } from "../i18n/ui"; // Corregir nombre de variable (lenguages → languages)
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatedPath = useTranslatedPath(lang);
 ---
 
 <header
@@ -13,7 +19,7 @@ const t = useTranslations(lang);
   <div class="px-4">
     <div class="flex items-center justify-between">
       <!-- Logo con efecto hover -->
-      <a href="/" class="group flex items-center gap-2">
+      <a href={translatedPath("/")} class="group flex items-center gap-2">
         <AliporiIcon
           class="h-14 w-14 md:h-12 md:w-12 transition-transform group-hover:scale-110 fill-white"
         />
@@ -25,7 +31,7 @@ const t = useTranslations(lang);
       <!-- Nav Items -->
       <nav class="hidden md:flex items-center gap-8">
         <a
-          href="/index.html"
+          href={translatedPath("/")}
           class="relative text-sm font-medium text-white/90 hover:text-blue-500 transition-colors duration-300"
         >
           <span class="hover-underline-animation">{t("navbar1")}</span>
