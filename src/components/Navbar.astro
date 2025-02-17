@@ -1,6 +1,7 @@
 ---
 import AliporiIcon from "../icons/AliporiIcon.astro";
 import Linkedin from "../icons/LinkedinIcon.astro";
+import HamburgerIcon from "../icons/Hamburger.astro";
 import {
   getLangFromUrl,
   useTranslations,
@@ -96,18 +97,46 @@ const translatedPath = useTranslatedPath(lang);
         </div>
 
         <!-- Icono de LinkedIn -->
-        <a
-          href="https://www.linkedin.com/in/alex-dominguez-esparza/"
-          target="_blank"
-          class="p-2 hover:bg-white/10 rounded-full transition-colors"
+        <button
+          class="md:hidden p-2 hover:bg-white/10 shadow-2xl rounded-full"
+          id="menu-toggle"
+          aria-label="Abrir menú"
         >
-          <Linkedin
-            class="w-6 h-6 fill-white hover:fill-blue-500 transition-colors"
-          />
-          <span class="sr-only">LinkedIn</span>
-        </a>
+          <HamburgerIcon class="w-6 h-6 fill-white" />
+        </button>
       </div>
     </div>
+  </div>
+  <div
+    id="mobile-menu"
+    class="md:hidden fixed top-20 inset-x-0 bg-black/80 backdrop-blur-xl border-white/10 py-4 hidden z-40"
+  >
+    <nav class="flex flex-col items-center gap-6">
+      <a
+        href={translatedPath("/")}
+        class="text-sm font-medium text-white/90 hover:text-blue-500"
+      >
+        {t("navbar1")}
+      </a>
+      <a
+        href={translatedPath("/#services")}
+        class="text-sm font-medium text-white/90 hover:text-blue-500"
+      >
+        {t("navbar2")}
+      </a>
+      <a
+        href={translatedPath("/#contact")}
+        class="text-sm font-medium text-white/90 hover:text-blue-500"
+      >
+        {t("navbar3")}
+      </a>
+      <a
+        href="./projects"
+        class="text-sm font-medium text-white/90 hover:text-blue-500"
+      >
+        {t("navbar4")}
+      </a>
+    </nav>
   </div>
 </header>
 
@@ -126,3 +155,21 @@ const translatedPath = useTranslatedPath(lang);
     width: 100%;
   }
 </style>
+
+<script client:load>
+  // Delegamos el evento click en el documento
+  document.addEventListener("click", (event) => {
+    const menuToggle = event.target.closest("#menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    // Si se hizo clic en el botón de hamburguesa, alterna el menú
+    if (menuToggle) {
+      mobileMenu.classList.toggle("hidden");
+    }
+
+    // Si se hizo clic en un enlace dentro del menú móvil, ciérralo
+    if (event.target.closest("#mobile-menu a")) {
+      mobileMenu.classList.add("hidden");
+    }
+  });
+</script>
