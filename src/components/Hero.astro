@@ -5,56 +5,120 @@ import {
   useTranslatedPath,
 } from "../i18n/utils";
 import { languages } from "../i18n/ui";
+import HeroIcon from "../icons/HeroIcon.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatedPath = useTranslatedPath(lang);
 ---
 
-<section class="px-4 py-12 md:py-0 md:px-10">
-  <div class="flex justify-center items-center min-h-screen">
-    <div class="text-center max-w-2xl">
-      <!-- Título con gradiente responsivo -->
+<section class="relative px-4 py-12 md:py-0 md:px-10 overflow-hidden">
+  <div
+    class="flex flex-col md:flex-row justify-center items-center min-h-screen gap-8 md:gap-16 max-w-7xl mx-auto"
+  >
+    {/* Text Content */}
+    <div class="text-center md:text-left md:w-1/2 z-10">
       <h1
-        class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#f2f2f3] to-[#a7a7a7]"
+        class="text-4xl md:text-6xl lg:text-5xl font-bold mb-4 md:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-500 animate-gradient"
       >
         {t("title")}
       </h1>
 
-      <!-- Subtítulo -->
-      <h2 class="text-xl md:text-2xl text-white/90 font-medium mb-4">
+      <p
+        class="text-lg md:text-xl text-white/90 mb-6 md:mb-8 max-w-xl mx-auto md:mx-0"
+      >
         {t("description")}
-      </h2>
-
-      <!-- Descripción -->
-      <p class="text-base md:text-lg text-white/80 mb-8">
-        {t("description2")}
       </p>
 
-      <!-- Botón de contacto (enlace semántico) -->
-      <a
-        href="https://wa.me/526183510239"
-        class="inline-block bg-white/10 backdrop-blur-lg text-white py-3 px-8 rounded-2xl shadow-lg ring-1 ring-black/5 hover:bg-white/20 transition-all duration-300"
+      <div
+        class="flex flex-col md:flex-row gap-4 justify-center md:justify-start"
       >
-        {t("button1")}
-      </a>
-
-      <!-- Flecha animada -->
-      <div class="mt-12 animate-bounce">
-        <a href="#aboutme">
-          <svg
-            onclick="scrollToFeatures()"
-            class="mx-auto w-10 h-10 text-white/80 cursor-pointer hover:text-white transition-colors"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
-              fill="currentColor"></path>
-          </svg>
+        <a
+          href="https://wa.me/526183510239"
+          class="inline-flex items-center space-x-2 justify-center bg-purple-600 hover:bg-purple-700 text-white py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-galaxy"
+        >
+          <span class="text-center"> {t("button1")}</span>
         </a>
+      </div>
+    </div>
+
+    {/* Laptop SVG */}
+    <div class="md:w-1/2 flex justify-center relative group">
+      <div class="relative w-full max-w-2xl aspect-video">
+        <img
+          src="/HeroIcon.svg"
+          alt="Laptop espacial"
+          class="w-full h-auto animate-float"
+        />
+        {/* Ventana de la laptop - Puedes agregar una imagen o video aquí */}
+      </div>
+    </div>
+
+    {/* Efectos estelares */}
+    <div class="absolute inset-0 z-0">
+      <div
+        class="absolute w-1 h-1 bg-white rounded-full top-20 left-1/4 animate-twinkle"
+      >
+      </div>
+      <div
+        class="absolute w-1 h-1 bg-cyan-400 rounded-full top-40 right-1/3 animate-twinkle-delay"
+      >
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes twinkle {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-twinkle {
+    animation: twinkle 3s ease-in-out infinite;
+  }
+
+  .animate-twinkle-delay {
+    animation: twinkle 4s ease-in-out 1s infinite;
+  }
+
+  .animate-gradient {
+    background-size: 200% auto;
+    animation: gradient-shift 5s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .shadow-galaxy {
+    box-shadow: 0 0 30px rgba(104, 51, 235, 0.4);
+  }
+</style>
