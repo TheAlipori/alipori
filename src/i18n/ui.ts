@@ -16,6 +16,8 @@ export const ui ={
     'description':'We design orbit-defying digital journeys',
     'description2':'I craft user-friendly and visually appealing web experiences that boost businesses online',
     'button1': '🚀 Launch Sequence',
+    'button2': 'Explore more',
+
     'about':'About me',
     'about1':'A quick glance',
     'cardabout1':"Years of experience",
@@ -78,6 +80,7 @@ export const ui ={
     'description':'Construiamos puentes digitales entre tu marca y el cosmos',
     'description2':'Transformo ideas en experiencias digitales atractivas y funcionales',
     'button1': 'Despegar ahora 🚀',
+    'button2': 'Explorar más',
     'about':'Sobre mi',
     'about1':'Un vistazo rapido',
     'cardabout1':"Años de experiencia",
