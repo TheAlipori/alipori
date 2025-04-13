@@ -1,0 +1,28 @@
+---
+import CreationsItem from "./CreationsItem.astro";
+
+const EXPERIENCE = [
+  {
+    title: "Copymax ",
+    description: "Rebranding + Landing Page",
+    link: "https://copymax.vercel.app/",
+  },
+  {
+    title: "Nedeal",
+    description: "Webpage",
+    link: "https://nedeal.vercel.app/",
+  },
+];
+---
+
+<section class="relative mx-auto max-w-5xl pt-48">
+  <ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+      EXPERIENCE.map((experience) => (
+        <li class="mb-10 ms-4">
+          <CreationsItem {...experience} />
+        </li>
+      ))
+    }
+  </ol>
+</section>

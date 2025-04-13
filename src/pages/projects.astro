@@ -9,10 +9,12 @@ const t = useTranslations(lang);
 const titleString = t("title");
 const descriptionString = t("description");
 import { defaultLang } from "../i18n/ui";
+import Creations from "../components/Creations.astro";
 Astro.redirect(`/${defaultLang}/`);
 ---
 
-<Layout title="Poli Labs"
-  ><Galeria />
+<Layout title="Poli Labs">
+  <Creations />
+  <Galeria />
   <Rebranding /></Layout
 >

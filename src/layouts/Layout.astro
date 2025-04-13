@@ -28,14 +28,8 @@ const lang = getLangFromUrl(Astro.url);
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class="bg-[#070713]">
+  <body>
     <!-- Fondo con bola -->
-    <div class="fixed inset-0 -z-10">
-      <div
-        class="absolute inset-0 m-auto h-[500px] w-[700px] rounded-full bg-[rgba(26,39,181,1)] opacity-90 blur-[100px]"
-      >
-      </div>
-    </div>
   </body><Navbar />
   <slot />
   <Footer />
@@ -46,7 +40,8 @@ const lang = getLangFromUrl(Astro.url);
       margin: 0;
       width: 100%;
       height: 100%;
-      font-family: "JetBrains Mono", serif;
+      font-family: "Poppins", sans-serif;
+      background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
     }
   </style>
 </html>
