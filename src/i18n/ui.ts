@@ -77,7 +77,7 @@ export const ui ={
     'navbar3': 'Contactame',
     'navbar4': 'Projectos',
     'title':'Impulsemos tu idea hasta las órbitas estelares',
-    'description':'Construiamos puentes digitales entre tu marca y el cosmos',
+    'description':'Construíamos puentes digitales entre tu marca y el cosmos',
     'description2':'Transformo ideas en experiencias digitales atractivas y funcionales',
     'button1': 'Despegar ahora 🚀',
     'button2': 'Explorar más',
