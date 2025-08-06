@@ -1,0 +1,100 @@
+---
+import MessageIcon from "../assets/messageIcon.astro";
+import RocketIcon from "../assets/rocketIcon.astro";
+import TargetIcon from "../assets/targetIcon.astro";
+import PlanetIcon from "../assets/planetIcon.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section>
+  <div class="flex flex-col items-center justify-center text-center p-8">
+    <h2
+      data-aos="fade-down"
+      data-aos-duration="1000"
+      data-aos-easing="ease-out-cubic"
+      class="max-w-lg mx-auto text-gray-300 mt-4 text-lg font-bold"
+    >
+      {t("whyme1")}
+    </h2>
+    <h2
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      data-aos-easing="ease-out-cubic"
+      class="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-4xl md:text-6xl"
+    >
+      {t("whyme2")}
+    </h2>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-8">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-easing="ease-out-cubic"
+      class="relative pl-9 animate-fade-in-up scroll-trigger group cursor-default"
+    >
+      <div class="inline font-bold text-white text-base/7 lg:text-lg/7">
+        <MessageIcon
+          class="absolute left-1 top-1 size-5 text-primary group-hover:text-purple-400"
+        />
+        {t("whyme3")}
+      </div>
+      <p class="inline text-base/7 lg:text-lg/7 text-white">
+        {t("whyme4")}
+      </p>
+    </div>
+
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-easing="ease-out-cubic"
+      class="relative pl-9 animate-fade-in-up scroll-trigger group cursor-default"
+    >
+      <div class="inline font-bold text-white text-base/7 lg:text-lg/7">
+        <RocketIcon
+          class="absolute left-1 top-1 size-5 text-primary group-hover:text-purple-400"
+        />
+        {t("whyme5")}
+        <p class="font-normal inline text-base/7 lg:text-lg/7 text-white">
+          {t("whyme6")}
+        </p>
+      </div>
+    </div>
+
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-easing="ease-out-cubic"
+      class="relative pl-9 animate-fade-in-up scroll-trigger group cursor-default"
+    >
+      <div class="inline font-bold text-white text-base/7 lg:text-lg/7">
+        <PlanetIcon
+          class="absolute left-1 top-1 size-5 text-primary group-hover:text-purple-400"
+        />
+        {t("whyme7")}
+        <p class="font-normal inline text-base/7 lg:text-lg/7 text-white">
+          {t("whyme8")}
+        </p>
+      </div>
+    </div>
+    <div
+      class="relative pl-9 animate-fade-in-up scroll-trigger group cursor-default"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-easing="ease-out-cubic"
+    >
+      <div class="inline font-bold text-white text-base/7 lg:text-lg/7">
+        <TargetIcon
+          class="absolute left-1 top-1 size-5 text-primary group-hover:text-purple-400"
+        />
+        {t("whyme9")}
+      </div>
+      <p class="font-normal inline text-base/7 lg:text-lg/7 text-white">
+        {t("whyme10")}
+      </p>
+    </div>
+  </div>
+</section>

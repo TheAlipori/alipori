@@ -10,9 +10,14 @@ const t = useTranslations(lang);
 
 <section
   id="aboutme"
-  class="relative block px-6 py-10 md:py-20 md:px-10 scroll-mt-16"
+  class="relative block px-6 mt-32 py-10 md:py-20 md:px-10 scroll-mt-16"
 >
-  <div class="relative mx-auto max-w-5xl text-center">
+  <!-- <div
+    data-aos="fade-down"
+    data-aos-duration="1000"
+    data-aos-easing="ease-out-cubic"
+    class="relative mx-auto max-w-5xl text-center"
+  >
     <h2
       class="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-4xl md:text-5xl"
     >
@@ -21,9 +26,12 @@ const t = useTranslations(lang);
     <p class="mx-auto mt-4 mb-12 max-w-xl text-gray-300 font-medium text-lg">
       {t("about1")}
     </p>
-  </div>
+  </div> -->
 
   <div
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    data-aos-easing="ease-out-cubic"
     class="relative mx-auto max-w-7xl z-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
   >
     <!-- Tarjeta 1 - Experiencia -->
@@ -58,13 +66,12 @@ const t = useTranslations(lang);
     >
       <IdIcon class="w-16 h-16 mb-6 fill-white/80" />
       <h3
-        class="text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-4"
+        class="text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-4"
       >
-        14289928
+        100%
       </h3>
       <p class="text-gray-300 font-medium text-lg leading-snug text-center">
         {t("cardabout3")}<br />
-        <span class="text-sm opacity-80">{t("cardabout4")}</span>
       </p>
     </div>
   </div>
@@ -76,3 +83,43 @@ const t = useTranslations(lang);
     style="background-image: linear-gradient(to left top, rgba(220, 38, 38, 0.2) 0%, transparent 50%, transparent 100%); border-color: rgba(92, 79, 240, 0.2);"
   >
   </div> -->
+
+<script is:inline>
+  window.addEventListener("DOMContentLoaded", () => {
+    const counterElement = document.getElementById("experienceCounter");
+    let hasCounted = false;
+
+    const animateCounter = () => {
+      let count = 0;
+      const target = 4;
+      const duration = 1500;
+      const fps = 60;
+      const increment = target / (duration / (1000 / fps));
+
+      const counter = setInterval(() => {
+        count += increment;
+        if (count >= target) {
+          count = target;
+          clearInterval(counter);
+        }
+        counterElement.textContent = `+${Math.floor(count)}`;
+      }, 1000 / fps);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasCounted) {
+            hasCounted = true;
+            animateCounter();
+          }
+        });
+      },
+      {
+        threshold: 0.5, // al 50% de visibilidad
+      }
+    );
+
+    observer.observe(counterElement);
+  });
+</script>

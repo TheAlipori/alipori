@@ -1,0 +1,72 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<!-- Para la version movil  -->
+<div
+  data-aos="zoom-in-up"
+  class="lg:hidden flex w-full px-4 overflow-visible mt-16 max-w-6xl mx-auto pt-6"
+>
+  <div class="relative w-full mb-2 sm:mb-3 md:-mb-2">
+    <!-- Primera imagen -->
+    <div
+      class="bg-gray-50 overflow-hidden w-full h-auto aspect-[16/10] transform rotate-[-5deg] z-30 rounded-xl border border-black/[.05] animate-fade-in-up scroll-trigger animate"
+      style="box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);"
+    >
+      <img
+        src="/landingpagecafelibre.jpeg"
+        alt="Landing page Cafe Libre"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- Segunda imagen -->
+    <div
+      class="bg-gray-50 overflow-hidden w-full h-auto aspect-[16/10] transform rotate-[4deg] translate-y-[-5px] md:translate-y-[-30px] z-40 rounded-xl border border-black/[.05] animate-fade-in-up scroll-trigger animate"
+      style="box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);"
+    >
+      <!-- Cambio aquí: imagen simple -->
+      <img
+        src="/landingpagecafelibre.jpeg"
+        alt="Landing page Cafe Libre"
+        class="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- Para la versión de escritorio, se utiliza un diseño más complejo con dos imágenes superpuestas y un efecto de rotación. Aquí está el código para esa sección: -->
+<div
+  data-aos="zoom-in-up"
+  data-aos-duration="2000"
+  class="z-[-10] hidden lg:flex w-full pl-2 pr-4 overflow-visible mt-20 xl:mt-24 max-w-4xl mx-auto animate-fade-in-up scroll-trigger animate-delay-300 animate"
+>
+  <div
+    class="relative flex items-center justify-center overflow-visible w-full"
+  >
+    <div class="w-3/5 aspect-video opacity-0 mb-31 pointer-events-none"></div>
+    <div
+      class="absolute overflow-hidden w-3/5 h-auto aspect-[16/10] transform rotate-[-2deg] translate-y-6 z-0 rounded-xl sm:hover:scale-110 sm:hover:rotate-[0deg] sm:hover:z-20 transition-all duration-300 border border-black/[.05]"
+      style="left: 0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);"
+    >
+      <img
+        src="/landingpagecafelibre.jpeg"
+        alt="Landing page Cafe Libre"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div
+      class="absolute overflow-hidden w-3/5 h-auto aspect-[16/10] transform rotate-[5deg] translate-y-[-12px] z-10 rounded-xl sm:hover:scale-110 sm:hover:rotate-[0deg] sm:hover:z-10 transition-all duration-300 border border-black/[.05]"
+      style="right: 0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);"
+    >
+      <img
+        src="/Desktop -2 alipori.png"
+        alt="Landing page Cafe Libre"
+        class="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+</div>

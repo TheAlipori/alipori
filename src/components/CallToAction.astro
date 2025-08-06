@@ -1,0 +1,74 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="py-20 px-4 overflow-x-hidden">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      <!-- Content Left Side -->
+      <div class="text-center lg:text-left">
+        <h2
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out-cubic"
+          class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
+        >
+          <span class="bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent">
+            {t('cta1')}
+          </span>
+        </h2>
+        
+        <p
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+          class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"
+        >
+          {t('cta2')}
+        </p>
+        
+        <div
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="400"
+        >
+          <a 
+            href="https://wa.me/5216182184762"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full hover:from-purple-700 hover:to-blue-700 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+          >
+            <span class="relative z-10 flex items-center gap-3">
+              {t('cta3')}
+              <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </span>
+            
+            <!-- Hover Effect -->
+            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 to-blue-400 opacity-0 transition-opacity duration-300 group-hover:opacity-20 blur-xl"></div>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Logo Right Side -->
+      <div
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        data-aos-delay="300"
+        class="flex justify-center lg:justify-end"
+      >
+        <img 
+          src="/logo.svg" 
+          alt="Pori Labs Logo" 
+          class="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 filter brightness-0 invert transition-transform duration-300 hover:scale-110"
+        />
+      </div>
+      
+    </div>
+  </div>
+</section>

@@ -28,13 +28,13 @@ const lang = getLangFromUrl(Astro.url);
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body>
+  <body class="px-8 lg:px-52">
     <!-- Fondo con bola -->
-  </body><Navbar />
-  <slot />
-  <Footer />
-
-  <style>
+    <Navbar />
+    <slot />
+    <Footer />
+    <script src="../js/main"></script>
+  </body><style>
     html,
     body {
       margin: 0;

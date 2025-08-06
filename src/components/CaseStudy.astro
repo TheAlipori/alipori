@@ -1,0 +1,128 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+interface Props {
+  subtitle: string;
+  title: string; 
+  description: string;
+  technologies: string[];
+  mainImage: string;
+  sideImage1: string;
+  sideImage2: string;
+  actionUrl?: string;
+  reverse?: boolean;
+}
+
+const { 
+  subtitle, 
+  title, 
+  description, 
+  technologies, 
+  mainImage, 
+  sideImage1, 
+  sideImage2, 
+  actionUrl = "#", 
+  reverse = false 
+} = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="py-20 px-4 overflow-x-hidden">
+  <div class="max-w-7xl mx-auto">
+    <div class={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${reverse ? 'lg:grid-flow-col-dense' : ''}`}>
+      
+      <!-- Content Side -->
+      <div class={`${reverse ? 'lg:col-start-2' : ''}`}>
+        <div
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          class="space-y-6"
+        >
+          <!-- Subtitle -->
+          <p class="text-purple-400 text-lg font-medium uppercase tracking-wide">
+            {subtitle}
+          </p>
+          
+          <!-- Title -->
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold">
+            <span class="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+              {title}
+            </span>
+          </h2>
+          
+          <!-- Description -->
+          <p class="text-gray-300 text-lg leading-relaxed">
+            {description}
+          </p>
+          
+          <!-- Technologies -->
+          <div class="space-y-4">
+            <h4 class="text-white font-bold text-xl">{t('case_built_with')}</h4>
+            <div class="flex flex-wrap gap-3">
+              {technologies.map((tech) => (
+                <span class="px-4 py-2 bg-gradient-to-r from-gray-800 to-gray-700 rounded-full text-white text-sm font-medium border border-gray-600 hover:border-purple-400 transition-colors duration-300">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+          
+          <!-- Action Button -->
+          <div class="pt-4">
+            <a 
+              href={actionUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-white font-bold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+            >
+              {t('case_view_action')}
+              <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Images Side -->
+      <div class={`${reverse ? 'lg:col-start-1' : ''}`}>
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+          class="space-y-4"
+        >
+          <!-- Main Image (16:9) -->
+          <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl hover:shadow-purple-500/25 transition-shadow duration-300">
+            <img 
+              src={mainImage}
+              alt={`${title} main preview`}
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          
+          <!-- Side Images (9:16) -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="aspect-[9/16] rounded-xl overflow-hidden shadow-xl hover:shadow-purple-500/20 transition-shadow duration-300">
+              <img 
+                src={sideImage1}
+                alt={`${title} side preview 1`}
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="aspect-[9/16] rounded-xl overflow-hidden shadow-xl hover:shadow-purple-500/20 transition-shadow duration-300">
+              <img 
+                src={sideImage2}
+                alt={`${title} side preview 2`}
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>

@@ -16,15 +16,25 @@ const t = useTranslations(lang);
 const titleString = t("title");
 const descriptionString = t("description");
 import { defaultLang } from "../i18n/ui";
+import Cards from "../components/Cards.astro";
+import Whyme from "../components/Whyme.astro";
+import SectionProjects from "../components/SectionProjects.astro";
+import Testimonials from "../components/Testimonials.astro";
+import CallToAction from "../components/CallToAction.astro";
 Astro.redirect(`/${defaultLang}/`);
 ---
 
 <Layout title="Pori Labs">
   <Hero />
+  <Cards />
+
   <Aboutme />
-  <Slider />
-  <Skills />
+
+  <Whyme />
+
+  <SectionProjects />
   <Services />
-  <Projects />
-  <Contact />
+
+  <Testimonials />
+  <CallToAction />
 </Layout>

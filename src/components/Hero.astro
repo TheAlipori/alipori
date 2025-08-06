@@ -12,37 +12,43 @@ const t = useTranslations(lang);
 const translatedPath = useTranslatedPath(lang);
 ---
 
-<section class="relative px-4 py-12 md:py-0 md:px-10 overflow-hidden">
+<section
+  class="relative px-4 py-12 md:py-0 md:px-10 overflow-hidden overflow-x-hidden"
+>
   <div
     class="flex flex-col md:flex-row justify-center items-center min-h-screen gap-8 md:gap-16 max-w-7xl mx-auto"
   >
     {/* Text Content */}
     <div class="text-center md:text-left md:w-1/2 z-10">
-      <h1
-        class="text-4xl md:text-6xl lg:text-5xl font-bold mb-4 md:mb-6 text-white"
-      >
-        {t("title")}
-      </h1>
+      <div data-aos="zoom-in-right" data-aos-duration="2000">
+        <h1
+          class="text-4xl md:text-6xl lg:text-5xl font-bold mb-4 md:mb-6 text-white"
+        >
+          {t("title")}
+        </h1>
 
-      <p
-        class="text-lg md:text-xl text-white mb-6 md:mb-8 max-w-xl mx-auto md:mx-0"
-      >
-        {t("description")}
-      </p>
+        <p
+          class="text-lg md:text-xl text-white mb-6 md:mb-8 max-w-xl mx-auto md:mx-0"
+        >
+          {t("description")}
+        </p>
+      </div>
 
       <div
+        data-aos="fade-right"
+        data-aos-duration="2000"
         class="flex flex-col md:flex-row gap-4 justify-center md:justify-start"
       >
         <a
-          href="https://wa.me/526183510239"
-          class="inline-flex items-center justify-center space-x-2 bg-purple-600 hover:bg-white text-white hover:text-purple-600 py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-galaxy"
+          href="https://wa.me/5216182184762"
+          class="w-auto inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-4 px-8 rounded-3xl transition-all duration-300 transform hover:scale-105 shadow-lg"
         >
           <span class="text-center">{t("button1")}</span>
         </a>
 
         <a
           href="#aboutme"
-          class="inline-flex items-center justify-center border-2 border-purple-500 hover:border-purple-400 bg-transparent hover:bg-purple-500/10 text-white hover:text-purple-300 py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
+          class="w-auto inline-flex items-center justify-center border-2 border-purple-500 hover:border-purple-400 bg-transparent hover:bg-purple-500/10 text-white hover:text-purple-300 py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
         >
           <span class="text-center">{t("button2")}</span>
         </a>
@@ -50,7 +56,11 @@ const translatedPath = useTranslatedPath(lang);
     </div>
 
     {/* Laptop SVG */}
-    <div class="md:w-1/2 flex justify-center relative group">
+    <div
+      class="md:w-1/2 flex justify-center relative group"
+      data-aos="zoom-in-left"
+      data-aos-duration="2000"
+    >
       <div class="relative w-full max-w-2xl aspect-video">
         <img
           src="/heroimage.webp"

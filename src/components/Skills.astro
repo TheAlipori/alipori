@@ -21,7 +21,12 @@ const t = useTranslations(lang);
   <!-- Aumenté a max-w-5xl -->
   <div class="flex flex-col justify-center gap-8">
     <!-- Agregué gap -->
-    <div class="text-center">
+    <div
+      class="text-center"
+      data-aos="fade-down"
+      data-aos-duration="1000"
+      data-aos-easing="ease-out-cubic"
+    >
       <h2
         class="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-4xl md:text-5xl"
       >
@@ -34,6 +39,9 @@ const t = useTranslations(lang);
     </div>
 
     <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-easing="ease-out-cubic"
       class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-8 place-items-center"
     >
       <!-- Grid responsivo -->

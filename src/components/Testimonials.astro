@@ -1,0 +1,141 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="py-16 px-4">
+  <div class="flex flex-col items-center justify-center text-center mb-12">
+    <h2
+      data-aos="fade-down"
+      data-aos-duration="1000"
+      data-aos-easing="ease-out-cubic"
+      class="max-w-lg mx-auto text-gray-300 mt-4 text-lg font-bold"
+    >
+      {t('testimonials1')}
+    </h2>
+    <h2
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      data-aos-easing="ease-out-cubic"
+      class="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-4xl md:text-6xl"
+    >
+      {t('testimonials2')}
+    </h2>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+    <!-- Testimonio 1: Martín Hernández -->
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="100"
+      class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/30 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 group"
+    >
+      <div class="flex items-center mb-4">
+        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+          {t('testimonial1_name').charAt(0)}
+        </div>
+        <div class="ml-4">
+          <h4 class="text-white font-bold">{t('testimonial1_name')}</h4>
+          <p class="text-gray-400 text-sm">{t('testimonial1_business')}</p>
+        </div>
+      </div>
+      <div class="flex mb-4">
+        {[1, 2, 3, 4, 5].map(() => (
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        ))}
+      </div>
+      <p class="text-gray-300 leading-relaxed">
+        "{t('testimonial1_text')}"
+      </p>
+    </div>
+
+    <!-- Testimonio 2: Ricardo López -->
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="200"
+      class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/30 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 group"
+    >
+      <div class="flex items-center mb-4">
+        <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+          {t('testimonial2_name').charAt(0)}
+        </div>
+        <div class="ml-4">
+          <h4 class="text-white font-bold">{t('testimonial2_name')}</h4>
+          <p class="text-gray-400 text-sm">{t('testimonial2_business')}</p>
+        </div>
+      </div>
+      <div class="flex mb-4">
+        {[1, 2, 3, 4, 5].map(() => (
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        ))}
+      </div>
+      <p class="text-gray-300 leading-relaxed">
+        "{t('testimonial2_text')}"
+      </p>
+    </div>
+
+    <!-- Testimonio 3: Javier Orozco -->
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="300"
+      class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/30 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 group"
+    >
+      <div class="flex items-center mb-4">
+        <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+          {t('testimonial3_name').charAt(0)}
+        </div>
+        <div class="ml-4">
+          <h4 class="text-white font-bold">{t('testimonial3_name')}</h4>
+          <p class="text-gray-400 text-sm">{t('testimonial3_business')}</p>
+        </div>
+      </div>
+      <div class="flex mb-4">
+        {[1, 2, 3, 4, 5].map(() => (
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        ))}
+      </div>
+      <p class="text-gray-300 leading-relaxed">
+        "{t('testimonial3_text')}"
+      </p>
+    </div>
+
+    <!-- Testimonio 4: Marcela Betancourt -->
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="400"
+      class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/30 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 group"
+    >
+      <div class="flex items-center mb-4">
+        <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+          {t('testimonial4_name').charAt(0)}
+        </div>
+        <div class="ml-4">
+          <h4 class="text-white font-bold">{t('testimonial4_name')}</h4>
+          <p class="text-gray-400 text-sm">{t('testimonial4_business')}</p>
+        </div>
+      </div>
+      <div class="flex mb-4">
+        {[1, 2, 3, 4, 5].map(() => (
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        ))}
+      </div>
+      <p class="text-gray-300 leading-relaxed">
+        "{t('testimonial4_text')}"
+      </p>
+    </div>
+  </div>
+</section>

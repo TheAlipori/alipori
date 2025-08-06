@@ -1,18 +1,53 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Galeria from "../../components/LandingPages.astro";
-import Rebranding from "../../components/Rebranding.astro";
+import PortfolioHero from "../../components/PortfolioHero.astro";
+import CaseStudy from "../../components/CaseStudy.astro";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
-import SelectLang from "../../components/SelectLang.astro";
+import CallToAction from "../../components/CallToAction.astro";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const titleString = t("title");
-const descriptionString = t("description");
-import { defaultLang } from "../../i18n/ui";
-Astro.redirect(`/${defaultLang}/`);
 ---
 
-<Layout title="Projects"
-  ><Galeria />
-  <Rebranding /></Layout
->
+<Layout title="Pori - Portfolio">
+  <PortfolioHero />
+
+  <!-- CopyMax Case Study -->
+  <CaseStudy
+    subtitle={t("case_copymax_subtitle")}
+    title={t("case_copymax_title")}
+    description={t("case_copymax_description")}
+    technologies={[
+      "Python",
+      "React",
+      "Astro",
+      "Tailwind CSS",
+      "Figma",
+      "Adobe illustrator",
+    ]}
+    mainImage="/Desktop -2 alipori.png"
+    sideImage1="/Desktop -2 alipori.png"
+    sideImage2="/Desktop -2 alipori.png"
+    actionUrl="https://copymax.com"
+  />
+  <CaseStudy
+    subtitle={t("case_copymax_subtitle")}
+    title={t("case_copymax_title")}
+    description={t("case_copymax_description")}
+    technologies={[
+      "Python",
+      "React",
+      "Astro",
+      "Tailwind CSS",
+      "Figma",
+      "Adobe illustrator",
+    ]}
+    mainImage="/Desktop -2 alipori.png"
+    sideImage1="/Desktop -2 alipori.png"
+    sideImage2="/Desktop -2 alipori.png"
+    actionUrl="https://copymax.com"
+  />
+
+  <!-- Add more case studies here -->
+
+  <CallToAction />
+</Layout>

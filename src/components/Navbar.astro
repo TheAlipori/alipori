@@ -15,7 +15,7 @@ const translatedPath = useTranslatedPath(lang);
 ---
 
 <header
-  class="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md bg-white/5 border-b border-white/10 shadow-2xl py-3 backdrop-blur-xl md:top-6 md:rounded-3xl lg:max-w-screen-lg transition-all duration-300 hover:bg-white/10"
+  class="fixed inset-x-0 top-0 z-40 mx-auto w-full max-w-screen-md bg-white/5 border-b border-white/10 shadow-2xl py-3 backdrop-blur-xl md:top-6 md:rounded-3xl lg:max-w-screen-lg transition-all duration-300 hover:bg-white/10"
 >
   <div class="px-4">
     <div class="flex items-center justify-between">
@@ -42,13 +42,13 @@ const translatedPath = useTranslatedPath(lang);
           <span class="hover-underline-animation">{t("navbar2")}</span>
         </a>
         <a
-          href={translatedPath("/#contact")}
+          href={translatedPath("/about")}
           class="relative text-sm font-bold text-white hover:text-purple-400 transition-colors duration-300"
         >
           <span class="hover-underline-animation">{t("navbar3")}</span>
         </a>
         <a
-          href="./projects"
+          href={`/${lang}/projects`}
           class="relative text-sm font-bold text-white hover:text-purple-400 transition-colors duration-300"
         >
           <span class="hover-underline-animation">{t("navbar4")}</span>
@@ -125,13 +125,13 @@ const translatedPath = useTranslatedPath(lang);
         {t("navbar2")}
       </a>
       <a
-        href={translatedPath("/#contact")}
+        href={translatedPath("/about")}
         class="text-sm font-medium text-white/90 hover:text-blue-500"
       >
         {t("navbar3")}
       </a>
       <a
-        href="./projects"
+        href={`/${lang}/projects`}
         class="text-sm font-medium text-white/90 hover:text-blue-500"
       >
         {t("navbar4")}

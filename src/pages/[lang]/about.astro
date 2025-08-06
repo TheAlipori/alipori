@@ -1,0 +1,23 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import AboutHero from "../../components/AboutHero.astro";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../../i18n/utils";
+import Skills from "../../components/Skills.astro";
+import Slider from "../../components/Slider.astro";
+import CallToAction from "../../components/CallToAction.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatedPath = useTranslatedPath(lang);
+---
+
+<Layout title={t("about_page_title")}>
+  <AboutHero lang={lang} />
+  <Skills />
+  <Slider />
+  <CallToAction />
+</Layout>

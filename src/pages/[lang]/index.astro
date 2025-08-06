@@ -9,22 +9,30 @@ import Footer from "../../components/Footer.astro";
 import Services from "../../components/Services.astro";
 import Slider from "../../components/Slider.astro";
 import Projects from "../../components/Projects.astro";
+import SectionProjects from "../../components/SectionProjects.astro";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import SelectLang from "../../components/SelectLang.astro";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const titleString = t("title");
 const descriptionString = t("description");
-import { defaultLang } from "../../i18n/ui";
-Astro.redirect(`/${defaultLang}/`);
+import Cards from "../../components/Cards.astro";
+import Whyme from "../../components/Whyme.astro";
+import Testimonials from "../../components/Testimonials.astro";
+import CallToAction from "../../components/CallToAction.astro";
 ---
 
-<Layout title="Pori Labs">
+<Layout title={titleString} description={descriptionString}>
   <Hero />
+  <Cards />
+
   <Aboutme />
-  <Slider />
-  <Skills />
+
+  <Whyme />
+
+  <SectionProjects />
   <Services />
-  <Projects />
-  <Contact />
+
+  <Testimonials />
+  <CallToAction />
 </Layout>

@@ -1,0 +1,50 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section>
+  <div class="flex flex-col items-center justify-center text-center p-8">
+    <h2
+      data-aos="fade-down"
+      data-aos-duration="1000"
+      data-aos-easing="ease-out-cubic"
+      class="max-w-lg mx-auto text-gray-300 mt-4 text-lg font-bold"
+    >
+      {t('sectionprojects1')}
+    </h2>
+    <h2
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      data-aos-easing="ease-out-cubic"
+      class="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-4xl md:text-6xl"
+    >
+      {t('sectionprojects2')}
+    </h2>
+    <p class="text-white mt-4 max-w-2xl">
+      {t('sectionprojects3')}
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="shadow-md hover:scale-105 transition-transform duration-300">
+      <img src="/Desktop -2 alipori.png " class="rounded-2xl" />
+    </div>
+    <div class="shadow-md hover:scale-105 transition-transform duration-300">
+      <img src="/Desktop -2 alipori.png" class="rounded-2xl" />
+    </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+    <div class="shadow-md hover:scale-105 transition-transform duration-300">
+      <img src="/Desktop -2 alipori.png" class="rounded-2xl" />
+    </div>
+    <div class="shadow-md hover:scale-105 transition-transform duration-300">
+      <img src="/Desktop -2 alipori.png" class="rounded-2xl" />
+    </div>
+    <div class="shadow-md hover:scale-105 transition-transform duration-300">
+      <img src="/Desktop -2 alipori.png" class="rounded-2xl" />
+    </div>
+  </div>
+</section>
