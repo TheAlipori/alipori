@@ -1,6 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import AboutHero from "../../components/AboutHero.astro";
+import AboutFoundation from "../../components/AboutFoundation.astro";
+import PersonalProfile from "../../components/PersonalProfile.astro";
 import {
   getLangFromUrl,
   useTranslations,
@@ -17,6 +19,8 @@ const translatedPath = useTranslatedPath(lang);
 
 <Layout title={t("about_page_title")}>
   <AboutHero lang={lang} />
+  <AboutFoundation lang={lang} />
+  <PersonalProfile lang={lang} />
   <Skills />
   <Slider />
   <CallToAction />
