@@ -12,22 +12,6 @@ const t = useTranslations(lang);
   id="aboutme"
   class="relative block px-6 mt-32 py-10 md:py-20 md:px-10 scroll-mt-16"
 >
-  <!-- <div
-    data-aos="fade-down"
-    data-aos-duration="1000"
-    data-aos-easing="ease-out-cubic"
-    class="relative mx-auto max-w-5xl text-center"
-  >
-    <h2
-      class="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-4xl md:text-5xl"
-    >
-      {t("about")}
-    </h2>
-    <p class="mx-auto mt-4 mb-12 max-w-xl text-gray-300 font-medium text-lg">
-      {t("about1")}
-    </p>
-  </div> -->
-
   <div
     data-aos="fade-up"
     data-aos-duration="1000"
@@ -36,53 +20,40 @@ const t = useTranslations(lang);
   >
     <!-- Tarjeta 1 - Experiencia -->
     <div
-      class="flex flex-col items-center rounded-xl p-8 bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300 h-full"
+      class="flex flex-col items-center rounded-xl p-8 bg-brand-light/20 border border-brand-teal/40 hover:border-brand hover:shadow-md transition-all duration-300 h-full"
     >
-      <ExperienceIcon class="w-16 h-16 mb-6 fill-white/80" />
-      <h3
-        class="text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-2"
-      >
+      <ExperienceIcon class="w-16 h-16 mb-6 fill-brand" />
+      <h3 class="text-5xl font-bold text-brand mb-2">
         +4
       </h3>
-      <p class="text-gray-300 font-medium text-lg">{t("cardabout1")}</p>
+      <p class="text-gray-600 font-medium text-lg">{t("cardabout1")}</p>
     </div>
 
     <!-- Tarjeta 2 - Proyectos -->
     <div
-      class="flex flex-col items-center rounded-xl p-8 bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300 h-full"
+      class="flex flex-col items-center rounded-xl p-8 bg-brand-light/20 border border-brand-teal/40 hover:border-brand hover:shadow-md transition-all duration-300 h-full"
     >
-      <ProjectsIcon class="w-16 h-16 mb-6 fill-white/80" />
-      <h3
-        class="text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-2"
-      >
+      <ProjectsIcon class="w-16 h-16 mb-6 fill-brand" />
+      <h3 class="text-5xl font-bold text-brand mb-2">
         +16
       </h3>
-      <p class="text-gray-300 font-medium text-lg">{t("cardabout2")}</p>
+      <p class="text-gray-600 font-medium text-lg">{t("cardabout2")}</p>
     </div>
 
     <!-- Tarjeta 3 - ID Profesional -->
     <div
-      class="flex flex-col items-center rounded-xl p-8 bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300 h-full"
+      class="flex flex-col items-center rounded-xl p-8 bg-brand-light/20 border border-brand-teal/40 hover:border-brand hover:shadow-md transition-all duration-300 h-full"
     >
-      <IdIcon class="w-16 h-16 mb-6 fill-white/80" />
-      <h3
-        class="text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-4"
-      >
+      <IdIcon class="w-16 h-16 mb-6 fill-brand" />
+      <h3 class="text-5xl font-bold text-brand mb-4">
         100%
       </h3>
-      <p class="text-gray-300 font-medium text-lg leading-snug text-center">
+      <p class="text-gray-600 font-medium text-lg leading-snug text-center">
         {t("cardabout3")}<br />
       </p>
     </div>
   </div>
 </section>
-
-<!-- Efecto muy chido  -->
-<!-- <div
-    class="absolute bottom-0 right-0 z-0 h-1/3 w-full"
-    style="background-image: linear-gradient(to left top, rgba(220, 38, 38, 0.2) 0%, transparent 50%, transparent 100%); border-color: rgba(92, 79, 240, 0.2);"
-  >
-  </div> -->
 
 <script is:inline>
   window.addEventListener("DOMContentLoaded", () => {
@@ -115,9 +86,7 @@ const t = useTranslations(lang);
           }
         });
       },
-      {
-        threshold: 0.5, // al 50% de visibilidad
-      }
+      { threshold: 0.5 }
     );
 
     observer.observe(counterElement);

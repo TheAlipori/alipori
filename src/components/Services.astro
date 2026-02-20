@@ -10,7 +10,7 @@ const t = useTranslations(lang);
 
 <section id="services" class="scroll-mt-16">
   <div
-    class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 text-white"
+    class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
   >
     <div
       class="text-center max-w-2xl mx-auto mb-16"
@@ -18,12 +18,10 @@ const t = useTranslations(lang);
       data-aos-duration="1000"
       data-aos-easing="ease-out-cubic"
     >
-      <p class="text-gray-300 text-lg">
+      <p class="text-gray-500 text-lg">
         {t("services2")}
       </p>
-      <h2
-        class="bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent text-4xl md:text-6xl font-bold mb-4"
-      >
+      <h2 class="text-gray-900 text-4xl md:text-6xl font-bold mb-4">
         {t("services1")}
       </h2>
     </div>
@@ -36,37 +34,34 @@ const t = useTranslations(lang);
     >
       <!-- Website Development Card -->
       <div
-        class="relative group rounded-xl p-8 bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300 shadow-xl flex flex-col"
+        class="relative group rounded-xl p-8 bg-brand-light/20 border border-brand-teal/40 hover:border-brand hover:bg-white hover:shadow-lg transition-all duration-300 flex flex-col"
       >
-        <LandingIcon class="w-16 h-16 mb-6 fill-white/80" />
-        <h3 class="text-2xl font-bold mb-4">{t("services3")}</h3>
+        <LandingIcon class="w-16 h-16 mb-6 fill-brand-mid" />
+        <h3 class="text-2xl font-bold mb-4 text-gray-900">{t("services3")}</h3>
 
         <div class="my-6">
-          <span
-            class="text-4xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
-            >{t("services4")}</span
-          >
-          <span class="text-gray-400">{t("services5")}</span>
+          <span class="text-4xl font-bold text-brand">{t("services4")}</span>
+          <span class="text-gray-500">{t("services5")}</span>
         </div>
 
-        <ul class="space-y-3 mb-8 text-gray-300">
+        <ul class="space-y-3 mb-8 text-gray-600">
           <li class="flex items-center gap-3">
-            <span class="text-purple-500 text-xl">✓</span>
+            <span class="text-brand text-xl">✓</span>
             {t("services6")}
           </li>
           <li class="flex items-center gap-3">
-            <span class="text-purple-500 text-xl">✓</span>
+            <span class="text-brand text-xl">✓</span>
             {t("services7")}
           </li>
           <li class="flex items-center gap-3">
-            <span class="text-purple-500 text-xl">✓</span>
+            <span class="text-brand text-xl">✓</span>
             {t("services8")}
           </li>
         </ul>
 
         <a
           href="#contact"
-          class="inline-block w-full py-3 text-center font-medium bg-purple-800/50 hover:bg-purple-800 rounded-lg transition-colors mt-auto"
+          class="inline-block w-full py-3 text-center font-medium bg-brand hover:bg-brand-dark text-white rounded-lg transition-colors mt-auto"
         >
           {t("services9")}
         </a>
@@ -74,37 +69,34 @@ const t = useTranslations(lang);
 
       <!-- UI/UX Design Card -->
       <div
-        class="relative group rounded-xl p-8 bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300 shadow-xl flex flex-col"
+        class="relative group rounded-xl p-8 bg-brand-light/20 border border-brand-teal/40 hover:border-brand hover:bg-white hover:shadow-lg transition-all duration-300 flex flex-col"
       >
-        <CelIcon class="w-16 h-16 mb-6 fill-white/80" />
-        <h3 class="text-2xl font-bold mb-4">{t("services10")}</h3>
+        <CelIcon class="w-16 h-16 mb-6 fill-brand-mid" />
+        <h3 class="text-2xl font-bold mb-4 text-gray-900">{t("services10")}</h3>
 
         <div class="my-6">
-          <span
-            class="text-4xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
-            >{t("services11")}</span
-          >
-          <span class="text-gray-400">{t("services12")}</span>
+          <span class="text-4xl font-bold text-brand">{t("services11")}</span>
+          <span class="text-gray-500">{t("services12")}</span>
         </div>
 
-        <ul class="space-y-3 mb-8 text-gray-300">
+        <ul class="space-y-3 mb-8 text-gray-600">
           <li class="flex items-center gap-3">
-            <span class="text-purple-500 text-xl">✓</span>
+            <span class="text-brand text-xl">✓</span>
             {t("services13")}
           </li>
           <li class="flex items-center gap-3">
-            <span class="text-purple-500 text-xl">✓</span>
+            <span class="text-brand text-xl">✓</span>
             {t("services14")}
           </li>
           <li class="flex items-center gap-3">
-            <span class="text-purple-500 text-xl">✓</span>
+            <span class="text-brand text-xl">✓</span>
             {t("services15")}
           </li>
         </ul>
 
         <a
           href="#contact"
-          class="inline-block w-full py-3 text-center font-medium bg-purple-800/50 hover:bg-purple-800 rounded-lg transition-colors mt-auto"
+          class="inline-block w-full py-3 text-center font-medium bg-brand hover:bg-brand-dark text-white rounded-lg transition-colors mt-auto"
         >
           {t("services16")}
         </a>
@@ -112,38 +104,34 @@ const t = useTranslations(lang);
 
       <!-- Branding Card -->
       <div
-        class="relative group rounded-xl p-8 bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-300 shadow-xl flex flex-col"
+        class="relative group rounded-xl p-8 bg-brand-light/20 border border-brand-teal/40 hover:border-brand hover:bg-white hover:shadow-lg transition-all duration-300 flex flex-col"
       >
-        <BrandIcon class="w-16 h-16 mb-6 fill-white/80" />
-        <h3 class="text-2xl font-bold mb-4">{t("services17")}</h3>
+        <BrandIcon class="w-16 h-16 mb-6 fill-brand-mid" />
+        <h3 class="text-2xl font-bold mb-4 text-gray-900">{t("services17")}</h3>
 
         <div class="my-6">
-          <span
-            class="text-4xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
-          >
-            {t("services18")}
-          </span>
-          <span class="text-gray-400"> {t("services19")}</span>
+          <span class="text-4xl font-bold text-brand">{t("services18")}</span>
+          <span class="text-gray-500"> {t("services19")}</span>
         </div>
 
-        <ul class="space-y-3 mb-8 text-gray-300">
+        <ul class="space-y-3 mb-8 text-gray-600">
           <li class="flex items-center gap-3">
-            <span class="text-purple-500 text-xl">✓</span>
+            <span class="text-brand text-xl">✓</span>
             {t("services20")}
           </li>
           <li class="flex items-center gap-3">
-            <span class="text-purple-500 text-xl">✓</span>
+            <span class="text-brand text-xl">✓</span>
             {t("services21")}
           </li>
           <li class="flex items-center gap-3">
-            <span class="text-purple-500 text-xl">✓</span>
+            <span class="text-brand text-xl">✓</span>
             {t("services22")}
           </li>
         </ul>
 
         <a
           href="#contact"
-          class="inline-block w-full py-3 text-center font-medium bg-purple-800/50 hover:bg-purple-800 rounded-lg transition-colors mt-auto"
+          class="inline-block w-full py-3 text-center font-medium bg-brand hover:bg-brand-dark text-white rounded-lg transition-colors mt-auto"
         >
           {t("services23")}
         </a>
@@ -151,15 +139,11 @@ const t = useTranslations(lang);
     </div>
 
     <div class="mt-16 text-center">
-      <p class="text-gray-400">
+      <p class="text-gray-500">
         {t("services24")}
-
-        <a
-          href="#contact"
-          class="text-purple-400 hover:text-purple-300 underline"
-        >
-          {t("services25")}</a
-        >
+        <a href="#contact" class="text-brand hover:text-brand-mid underline">
+          {t("services25")}
+        </a>
       </p>
     </div>
   </div>

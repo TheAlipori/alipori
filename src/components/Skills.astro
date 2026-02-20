@@ -18,22 +18,17 @@ const t = useTranslations(lang);
 ---
 
 <div class="max-w-5xl mx-auto px-5 mt-28">
-  <!-- Aumenté a max-w-5xl -->
   <div class="flex flex-col justify-center gap-8">
-    <!-- Agregué gap -->
     <div
       class="text-center"
       data-aos="fade-down"
       data-aos-duration="1000"
       data-aos-easing="ease-out-cubic"
     >
-      <h2
-        class="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-4xl md:text-5xl"
-      >
+      <h2 class="block w-full text-gray-900 font-bold text-4xl md:text-5xl">
         Tech Stack
       </h2>
-      <p class="max-w-lg mx-auto text-gray-300 mt-4 text-lg">
-        <!-- Mejor contraste -->
+      <p class="max-w-lg mx-auto text-gray-600 mt-4 text-lg">
         {t("tech2")}
       </p>
     </div>
@@ -44,11 +39,8 @@ const t = useTranslations(lang);
       data-aos-easing="ease-out-cubic"
       class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-8 place-items-center"
     >
-      <!-- Grid responsivo -->
-      <!-- Cada icono con hover y transición -->
       <div class="p-4 hover:scale-110 transition-transform duration-300">
         <ReactIcon class="w-12 h-12 text-[#61DAFB]" />
-        <!-- Color brand -->
       </div>
       <div class="p-4 hover:scale-110 transition-transform duration-300">
         <TailwinIcon class="w-12 h-12 text-[#38BDF8]" />
@@ -57,7 +49,7 @@ const t = useTranslations(lang);
         <SanityIcon class="w-12 h-12 text-[#F03E2F]" />
       </div>
       <div class="p-4 hover:scale-110 transition-transform duration-300">
-        <VercelIcon class="w-12 h-12 text-white" />
+        <VercelIcon class="w-12 h-12 text-brand" />
       </div>
       <div class="p-4 hover:scale-110 transition-transform duration-300">
         <FigmaIcon class="w-12 h-12 text-[#A259FF]" />
@@ -66,7 +58,7 @@ const t = useTranslations(lang);
         <AdobeIcon class="w-12 h-12 text-[#FF0000]" />
       </div>
       <div class="p-4 hover:scale-110 transition-transform duration-300">
-        <AstroIcon class="w-12 h-12 text-white" />
+        <AstroIcon class="w-12 h-12 text-brand" />
       </div>
       <div class="p-4 hover:scale-110 transition-transform duration-300">
         <JavaScriptIcon class="w-12 h-12 text-[#F7DF1E]" />

@@ -13,15 +13,13 @@ const t = useTranslations(lang);
   <div class="max-w-6xl mx-auto">
     <!-- Main Title -->
     <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6">
-        <span class="bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent">
-          {t("personal_profile_title")}
-        </span>
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+        {t("personal_profile_title")}
       </h2>
-      <p class="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-4">
+      <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-4">
         {t("personal_intro")}
       </p>
-      <p class="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+      <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
         {t("personal_profile_subtitle")}
       </p>
     </div>
@@ -29,133 +27,119 @@ const t = useTranslations(lang);
     <!-- Content Grid -->
     <div class="grid lg:grid-cols-3 gap-8">
       <!-- Education Card -->
-      <div 
-        data-aos="fade-up" 
-        data-aos-duration="1000" 
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
         data-aos-delay="200"
-        class="bg-gradient-to-br from-purple-900/30 to-blue-900/30 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-500/30 transition-all duration-300"
+        class="bg-brand-light/20 rounded-2xl p-8 border border-brand-teal/40 hover:border-brand hover:shadow-md transition-all duration-300"
       >
         <div class="flex items-center gap-4 mb-6">
-          <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center">
+          <div class="w-12 h-12 bg-brand rounded-xl flex items-center justify-center">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-white">{t("education_title")}</h3>
+          <h3 class="text-xl font-bold text-gray-900">{t("education_title")}</h3>
         </div>
         <div class="space-y-4">
           <div>
-            <h4 class="text-lg font-semibold text-white mb-2">{t("degree_title")}</h4>
-            <p class="text-white/70 leading-relaxed">{t("degree_description")}</p>
+            <h4 class="text-lg font-semibold text-gray-900 mb-2">{t("degree_title")}</h4>
+            <p class="text-gray-600 leading-relaxed">{t("degree_description")}</p>
           </div>
           <div>
-            <h4 class="text-sm font-medium text-purple-300 mb-1">{t("specialization_title")}</h4>
-            <p class="text-white/70 text-sm">{t("specialization_description")}</p>
+            <h4 class="text-sm font-medium text-brand mb-1">{t("specialization_title")}</h4>
+            <p class="text-gray-500 text-sm">{t("specialization_description")}</p>
           </div>
         </div>
       </div>
 
       <!-- Gaming Card -->
-      <div 
-        data-aos="fade-up" 
-        data-aos-duration="1000" 
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
         data-aos-delay="400"
-        class="bg-gradient-to-br from-purple-900/30 to-blue-900/30 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-500/30 transition-all duration-300"
+        class="bg-brand-light/20 rounded-2xl p-8 border border-brand-teal/40 hover:border-brand hover:shadow-md transition-all duration-300"
       >
         <div class="flex items-center gap-4 mb-6">
-          <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center">
+          <div class="w-12 h-12 bg-brand rounded-xl flex items-center justify-center">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.01M15 10h1.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-white">{t("gaming_title")}</h3>
+          <h3 class="text-xl font-bold text-gray-900">{t("gaming_title")}</h3>
         </div>
         <div class="space-y-4">
-          <p class="text-white/70 leading-relaxed">{t("gaming_description")}</p>
+          <p class="text-gray-600 leading-relaxed">{t("gaming_description")}</p>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-purple-600/30 text-purple-200 text-sm rounded-full">{t("gaming_skill1")}</span>
-            <span class="px-3 py-1 bg-blue-600/30 text-blue-200 text-sm rounded-full">{t("gaming_skill2")}</span>
-            <span class="px-3 py-1 bg-purple-600/30 text-purple-200 text-sm rounded-full">{t("gaming_skill3")}</span>
+            <span class="px-3 py-1 bg-brand-light text-brand text-sm rounded-full">{t("gaming_skill1")}</span>
+            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">{t("gaming_skill2")}</span>
+            <span class="px-3 py-1 bg-brand-light text-brand text-sm rounded-full">{t("gaming_skill3")}</span>
           </div>
         </div>
       </div>
 
       <!-- Hiking Card -->
-      <div 
-        data-aos="fade-up" 
-        data-aos-duration="1000" 
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
         data-aos-delay="600"
-        class="bg-gradient-to-br from-purple-900/30 to-blue-900/30 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-500/30 transition-all duration-300"
+        class="bg-brand-light/20 rounded-2xl p-8 border border-brand-teal/40 hover:border-brand hover:shadow-md transition-all duration-300"
       >
         <div class="flex items-center gap-4 mb-6">
-          <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center">
+          <div class="w-12 h-12 bg-brand rounded-xl flex items-center justify-center">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-white">{t("hiking_title")}</h3>
+          <h3 class="text-xl font-bold text-gray-900">{t("hiking_title")}</h3>
         </div>
         <div class="space-y-4">
-          <p class="text-white/70 leading-relaxed">{t("hiking_description")}</p>
+          <p class="text-gray-600 leading-relaxed">{t("hiking_description")}</p>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-green-600/30 text-green-200 text-sm rounded-full">{t("hiking_skill1")}</span>
-            <span class="px-3 py-1 bg-blue-600/30 text-blue-200 text-sm rounded-full">{t("hiking_skill2")}</span>
-            <span class="px-3 py-1 bg-purple-600/30 text-purple-200 text-sm rounded-full">{t("hiking_skill3")}</span>
+            <span class="px-3 py-1 bg-green-100 text-green-700 text-sm rounded-full">{t("hiking_skill1")}</span>
+            <span class="px-3 py-1 bg-brand-teal/20 text-brand-teal text-sm rounded-full">{t("hiking_skill2")}</span>
+            <span class="px-3 py-1 bg-brand-light text-brand text-sm rounded-full">{t("hiking_skill3")}</span>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Commitment Statement -->
-    <div 
-      data-aos="fade-up" 
-      data-aos-duration="1000" 
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
       data-aos-delay="800"
       class="mt-16 text-center"
     >
-      <div class="bg-gradient-to-br from-purple-900/20 to-blue-900/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10 max-w-4xl mx-auto">
-        <h3 class="text-2xl font-bold text-white mb-4">{t("commitment_title")}</h3>
-        <p class="text-lg text-white/80 leading-relaxed mb-6">{t("commitment_description")}</p>
-        
-        <!-- CV Download Button -->
-        <div 
-          data-aos="fade-up" 
-          data-aos-duration="1000" 
+      <div class="bg-brand-light/20 rounded-2xl p-8 border border-brand-teal/40 max-w-4xl mx-auto">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">{t("commitment_title")}</h3>
+        <p class="text-lg text-gray-600 leading-relaxed mb-6">{t("commitment_description")}</p>
+
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
           data-aos-delay="900"
           class="mt-6"
         >
           <a
             href={`/cv-alipori-${lang}.pdf`}
             target="_blank"
-            class="group relative inline-flex items-center justify-center px-6 py-3 text-base font-bold text-white transition-all duration-300 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl hover:from-purple-700 hover:to-blue-700 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+            class="group inline-flex items-center justify-center px-6 py-3 text-base font-bold text-white transition-all duration-300 bg-brand rounded-xl hover:bg-brand-dark hover:scale-105 shadow-lg"
           >
-            <span class="relative z-10 flex items-center gap-3">
+            <span class="flex items-center gap-3">
               <svg
                 class="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-0.5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                ></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
               </svg>
               {t("cv_download_button")}
             </span>
-            <div
-              class="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-400 to-blue-400 opacity-0 transition-opacity duration-300 group-hover:opacity-20 blur-xl"
-            >
-            </div>
           </a>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Background Elements -->
-  <div class="absolute top-1/3 left-10 w-32 h-32 bg-purple-600/10 rounded-full blur-2xl -z-10"></div>
-  <div class="absolute bottom-1/3 right-10 w-40 h-40 bg-blue-600/10 rounded-full blur-2xl -z-10"></div>
 </section>
