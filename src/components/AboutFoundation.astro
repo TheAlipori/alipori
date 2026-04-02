@@ -13,11 +13,12 @@ const t = useTranslations(lang);
   <div class="max-w-6xl mx-auto">
     <!-- Main Title -->
     <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
         {t("about_foundation_title")}
       </h2>
       <p
-        class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+        class="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
+        style="color: var(--text-body);"
       >
         {t("about_foundation_subtitle")}
       </p>
@@ -33,13 +34,13 @@ const t = useTranslations(lang);
           data-aos-duration="1000"
           data-aos-delay="200"
         >
-          <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+          <h3 class="text-2xl md:text-3xl font-bold text-white mb-6">
             {t("about_mission_title")}
           </h3>
-          <p class="text-gray-600 text-lg leading-relaxed mb-6">
+          <p class="text-lg leading-relaxed mb-6" style="color: var(--text-body);">
             {t("about_mission_text")}
           </p>
-          <p class="text-gray-600 text-lg leading-relaxed">
+          <p class="text-lg leading-relaxed" style="color: var(--text-body);">
             {t("about_mission_text2")}
           </p>
         </div>
@@ -49,27 +50,28 @@ const t = useTranslations(lang);
           data-aos="fade-right"
           data-aos-duration="1000"
           data-aos-delay="400"
-          class="bg-brand-light/30 rounded-2xl p-8 border border-brand-teal/40"
+          class="rounded-2xl p-8 backdrop-blur-xl"
+          style="background: linear-gradient(140deg, rgba(175,190,255,0.05), rgba(175,190,255,0.20));"
         >
-          <h4 class="text-xl font-bold text-gray-900 mb-6">
+          <h4 class="text-xl font-bold text-white mb-6">
             {t("about_numbers_title")}
           </h4>
           <div class="grid grid-cols-2 gap-6">
             <div class="text-center">
-              <div class="text-3xl font-bold text-brand mb-2">100%</div>
-              <div class="text-gray-500 text-sm">{t("about_number1")}</div>
+              <div class="text-3xl font-bold text-white mb-2">100%</div>
+              <div class="text-sm" style="color: var(--text-body);">{t("about_number1")}</div>
             </div>
             <div class="text-center">
-              <div class="text-3xl font-bold text-brand mb-2">5+</div>
-              <div class="text-gray-500 text-sm">{t("about_number2")}</div>
+              <div class="text-3xl font-bold text-white mb-2">5+</div>
+              <div class="text-sm" style="color: var(--text-body);">{t("about_number2")}</div>
             </div>
             <div class="text-center">
-              <div class="text-3xl font-bold text-brand mb-2">1-on-1</div>
-              <div class="text-gray-500 text-sm">{t("about_number3")}</div>
+              <div class="text-3xl font-bold text-white mb-2">1-on-1</div>
+              <div class="text-sm" style="color: var(--text-body);">{t("about_number3")}</div>
             </div>
             <div class="text-center">
-              <div class="text-3xl font-bold text-brand mb-2">100%</div>
-              <div class="text-gray-500 text-sm">{t("about_number4")}</div>
+              <div class="text-3xl font-bold text-white mb-2">100%</div>
+              <div class="text-sm" style="color: var(--text-body);">{t("about_number4")}</div>
             </div>
           </div>
         </div>
@@ -78,7 +80,7 @@ const t = useTranslations(lang);
       <!-- Right Column - Advantages -->
       <div class="space-y-8">
         <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-          <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+          <h3 class="text-2xl md:text-3xl font-bold text-white mb-8">
             {t("about_advantage_title")}
           </h3>
         </div>
@@ -89,15 +91,14 @@ const t = useTranslations(lang);
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-delay="400"
-            class="bg-brand-light/20 rounded-xl p-6 border border-brand-teal/40 hover:border-brand transition-all duration-300"
+            class="rounded-xl p-6 backdrop-blur-xl transition-all duration-300"
+            style="background: linear-gradient(140deg, rgba(175,190,255,0.05), rgba(175,190,255,0.20));"
           >
-            <h4
-              class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-3"
-            >
-              <div class="w-2 h-2 bg-brand rounded-full flex-shrink-0"></div>
+            <h4 class="text-lg font-bold text-white mb-3 flex items-center gap-3">
+              <div class="w-2 h-2 bg-white rounded-full flex-shrink-0"></div>
               {t("about_advantage1_title")}
             </h4>
-            <p class="text-gray-600 leading-relaxed">
+            <p class="leading-relaxed" style="color: var(--text-body);">
               {t("about_advantage1_text")}
             </p>
           </div>
@@ -106,15 +107,14 @@ const t = useTranslations(lang);
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-delay="500"
-            class="bg-brand-light/20 rounded-xl p-6 border border-brand-teal/40 hover:border-brand transition-all duration-300"
+            class="rounded-xl p-6 backdrop-blur-xl transition-all duration-300"
+            style="background: linear-gradient(140deg, rgba(175,190,255,0.05), rgba(175,190,255,0.20));"
           >
-            <h4
-              class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-3"
-            >
-              <div class="w-2 h-2 bg-brand rounded-full flex-shrink-0"></div>
+            <h4 class="text-lg font-bold text-white mb-3 flex items-center gap-3">
+              <div class="w-2 h-2 bg-white rounded-full flex-shrink-0"></div>
               {t("about_advantage2_title")}
             </h4>
-            <p class="text-gray-600 leading-relaxed">
+            <p class="leading-relaxed" style="color: var(--text-body);">
               {t("about_advantage2_text")}
             </p>
           </div>
@@ -123,15 +123,14 @@ const t = useTranslations(lang);
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-delay="600"
-            class="bg-brand-light/20 rounded-xl p-6 border border-brand-teal/40 hover:border-brand transition-all duration-300"
+            class="rounded-xl p-6 backdrop-blur-xl transition-all duration-300"
+            style="background: linear-gradient(140deg, rgba(175,190,255,0.05), rgba(175,190,255,0.20));"
           >
-            <h4
-              class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-3"
-            >
-              <div class="w-2 h-2 bg-brand rounded-full flex-shrink-0"></div>
+            <h4 class="text-lg font-bold text-white mb-3 flex items-center gap-3">
+              <div class="w-2 h-2 bg-white rounded-full flex-shrink-0"></div>
               {t("about_advantage3_title")}
             </h4>
-            <p class="text-gray-600 leading-relaxed">
+            <p class="leading-relaxed" style="color: var(--text-body);">
               {t("about_advantage3_text")}
             </p>
           </div>
@@ -140,15 +139,14 @@ const t = useTranslations(lang);
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-delay="700"
-            class="bg-brand-light/20 rounded-xl p-6 border border-brand-teal/40 hover:border-brand transition-all duration-300"
+            class="rounded-xl p-6 backdrop-blur-xl transition-all duration-300"
+            style="background: linear-gradient(140deg, rgba(175,190,255,0.05), rgba(175,190,255,0.20));"
           >
-            <h4
-              class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-3"
-            >
-              <div class="w-2 h-2 bg-brand rounded-full flex-shrink-0"></div>
+            <h4 class="text-lg font-bold text-white mb-3 flex items-center gap-3">
+              <div class="w-2 h-2 bg-white rounded-full flex-shrink-0"></div>
               {t("about_advantage4_title")}
             </h4>
-            <p class="text-gray-600 leading-relaxed">
+            <p class="leading-relaxed" style="color: var(--text-body);">
               {t("about_advantage4_text")}
             </p>
           </div>

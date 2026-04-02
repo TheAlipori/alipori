@@ -20,35 +20,32 @@ const t = useTranslations(lang);
   >
     <!-- Tarjeta 1 - Experiencia -->
     <div
-      class="flex flex-col items-center rounded-xl p-8 bg-brand-light/20 border border-brand-teal/40 hover:border-brand hover:shadow-md transition-all duration-300 h-full"
+      class="flex flex-col items-center rounded-xl p-8 h-full backdrop-blur-xl"
+      style="background: linear-gradient(140deg, rgba(175,190,255,0.05), rgba(175,190,255,0.20));"
     >
-      <ExperienceIcon class="w-16 h-16 mb-6 fill-brand" />
-      <h3 class="text-5xl font-bold text-brand mb-2">
-        +4
-      </h3>
-      <p class="text-gray-600 font-medium text-lg">{t("cardabout1")}</p>
+      <ExperienceIcon class="w-16 h-16 mb-6 fill-white" />
+      <h3 class="text-5xl font-bold text-white mb-2">+4</h3>
+      <p class="text-white/70 font-medium text-lg">{t("cardabout1")}</p>
     </div>
 
     <!-- Tarjeta 2 - Proyectos -->
     <div
-      class="flex flex-col items-center rounded-xl p-8 bg-brand-light/20 border border-brand-teal/40 hover:border-brand hover:shadow-md transition-all duration-300 h-full"
+      class="flex flex-col items-center rounded-xl p-8 h-full backdrop-blur-xl"
+      style="background: linear-gradient(140deg, rgba(175,190,255,0.05), rgba(175,190,255,0.20));"
     >
-      <ProjectsIcon class="w-16 h-16 mb-6 fill-brand" />
-      <h3 class="text-5xl font-bold text-brand mb-2">
-        +16
-      </h3>
-      <p class="text-gray-600 font-medium text-lg">{t("cardabout2")}</p>
+      <ProjectsIcon class="w-16 h-16 mb-6 fill-white" />
+      <h3 class="text-5xl font-bold text-white mb-2">+16</h3>
+      <p class="text-white/70 font-medium text-lg">{t("cardabout2")}</p>
     </div>
 
     <!-- Tarjeta 3 - ID Profesional -->
     <div
-      class="flex flex-col items-center rounded-xl p-8 bg-brand-light/20 border border-brand-teal/40 hover:border-brand hover:shadow-md transition-all duration-300 h-full"
+      class="flex flex-col items-center rounded-xl p-8 h-full"
+      style="background: linear-gradient(140deg, rgba(175,190,255,0.05), rgba(175,190,255,0.20));"
     >
-      <IdIcon class="w-16 h-16 mb-6 fill-brand" />
-      <h3 class="text-5xl font-bold text-brand mb-4">
-        100%
-      </h3>
-      <p class="text-gray-600 font-medium text-lg leading-snug text-center">
+      <IdIcon class="w-16 h-16 mb-6 fill-white" />
+      <h3 class="text-5xl font-bold text-white mb-4">100%</h3>
+      <p class="text-white/70 font-medium text-lg leading-snug text-center">
         {t("cardabout3")}<br />
       </p>
     </div>
@@ -86,7 +83,7 @@ const t = useTranslations(lang);
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     observer.observe(counterElement);

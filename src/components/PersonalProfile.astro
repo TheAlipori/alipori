@@ -13,13 +13,13 @@ const t = useTranslations(lang);
   <div class="max-w-6xl mx-auto">
     <!-- Main Title -->
     <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
         {t("personal_profile_title")}
       </h2>
-      <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-4">
+      <p class="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-4" style="color: var(--text-body);">
         {t("personal_intro")}
       </p>
-      <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+      <p class="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed" style="color: var(--text-body);">
         {t("personal_profile_subtitle")}
       </p>
     </div>
@@ -31,24 +31,25 @@ const t = useTranslations(lang);
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-delay="200"
-        class="bg-brand-light/20 rounded-2xl p-8 border border-brand-teal/40 hover:border-brand hover:shadow-md transition-all duration-300"
+        class="rounded-2xl p-8 backdrop-blur-xl transition-all duration-300"
+        style="background: linear-gradient(140deg, rgba(175,190,255,0.05), rgba(175,190,255,0.20));"
       >
         <div class="flex items-center gap-4 mb-6">
-          <div class="w-12 h-12 bg-brand rounded-xl flex items-center justify-center">
+          <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-gray-900">{t("education_title")}</h3>
+          <h3 class="text-xl font-bold text-white">{t("education_title")}</h3>
         </div>
         <div class="space-y-4">
           <div>
-            <h4 class="text-lg font-semibold text-gray-900 mb-2">{t("degree_title")}</h4>
-            <p class="text-gray-600 leading-relaxed">{t("degree_description")}</p>
+            <h4 class="text-lg font-semibold text-white mb-2">{t("degree_title")}</h4>
+            <p class="leading-relaxed" style="color: var(--text-body);">{t("degree_description")}</p>
           </div>
           <div>
-            <h4 class="text-sm font-medium text-brand mb-1">{t("specialization_title")}</h4>
-            <p class="text-gray-500 text-sm">{t("specialization_description")}</p>
+            <h4 class="text-sm font-medium text-white/70 mb-1">{t("specialization_title")}</h4>
+            <p class="text-sm" style="color: var(--text-body);">{t("specialization_description")}</p>
           </div>
         </div>
       </div>
@@ -58,22 +59,23 @@ const t = useTranslations(lang);
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-delay="400"
-        class="bg-brand-light/20 rounded-2xl p-8 border border-brand-teal/40 hover:border-brand hover:shadow-md transition-all duration-300"
+        class="rounded-2xl p-8 backdrop-blur-xl transition-all duration-300"
+        style="background: linear-gradient(140deg, rgba(175,190,255,0.05), rgba(175,190,255,0.20));"
       >
         <div class="flex items-center gap-4 mb-6">
-          <div class="w-12 h-12 bg-brand rounded-xl flex items-center justify-center">
+          <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.01M15 10h1.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-gray-900">{t("gaming_title")}</h3>
+          <h3 class="text-xl font-bold text-white">{t("gaming_title")}</h3>
         </div>
         <div class="space-y-4">
-          <p class="text-gray-600 leading-relaxed">{t("gaming_description")}</p>
+          <p class="leading-relaxed" style="color: var(--text-body);">{t("gaming_description")}</p>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-brand-light text-brand text-sm rounded-full">{t("gaming_skill1")}</span>
-            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">{t("gaming_skill2")}</span>
-            <span class="px-3 py-1 bg-brand-light text-brand text-sm rounded-full">{t("gaming_skill3")}</span>
+            <span class="px-3 py-1 bg-white/10 text-white text-sm rounded-full">{t("gaming_skill1")}</span>
+            <span class="px-3 py-1 bg-white/10 text-white text-sm rounded-full">{t("gaming_skill2")}</span>
+            <span class="px-3 py-1 bg-white/10 text-white text-sm rounded-full">{t("gaming_skill3")}</span>
           </div>
         </div>
       </div>
@@ -83,22 +85,23 @@ const t = useTranslations(lang);
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-delay="600"
-        class="bg-brand-light/20 rounded-2xl p-8 border border-brand-teal/40 hover:border-brand hover:shadow-md transition-all duration-300"
+        class="rounded-2xl p-8 backdrop-blur-xl transition-all duration-300"
+        style="background: linear-gradient(140deg, rgba(175,190,255,0.05), rgba(175,190,255,0.20));"
       >
         <div class="flex items-center gap-4 mb-6">
-          <div class="w-12 h-12 bg-brand rounded-xl flex items-center justify-center">
+          <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-gray-900">{t("hiking_title")}</h3>
+          <h3 class="text-xl font-bold text-white">{t("hiking_title")}</h3>
         </div>
         <div class="space-y-4">
-          <p class="text-gray-600 leading-relaxed">{t("hiking_description")}</p>
+          <p class="leading-relaxed" style="color: var(--text-body);">{t("hiking_description")}</p>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-green-100 text-green-700 text-sm rounded-full">{t("hiking_skill1")}</span>
-            <span class="px-3 py-1 bg-brand-teal/20 text-brand-teal text-sm rounded-full">{t("hiking_skill2")}</span>
-            <span class="px-3 py-1 bg-brand-light text-brand text-sm rounded-full">{t("hiking_skill3")}</span>
+            <span class="px-3 py-1 bg-white/10 text-white text-sm rounded-full">{t("hiking_skill1")}</span>
+            <span class="px-3 py-1 bg-white/10 text-white text-sm rounded-full">{t("hiking_skill2")}</span>
+            <span class="px-3 py-1 bg-white/10 text-white text-sm rounded-full">{t("hiking_skill3")}</span>
           </div>
         </div>
       </div>
@@ -111,9 +114,12 @@ const t = useTranslations(lang);
       data-aos-delay="800"
       class="mt-16 text-center"
     >
-      <div class="bg-brand-light/20 rounded-2xl p-8 border border-brand-teal/40 max-w-4xl mx-auto">
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">{t("commitment_title")}</h3>
-        <p class="text-lg text-gray-600 leading-relaxed mb-6">{t("commitment_description")}</p>
+      <div
+        class="rounded-2xl p-8 max-w-4xl mx-auto backdrop-blur-xl"
+        style="background: linear-gradient(140deg, rgba(175,190,255,0.05), rgba(175,190,255,0.20));"
+      >
+        <h3 class="text-2xl font-bold text-white mb-4">{t("commitment_title")}</h3>
+        <p class="text-lg leading-relaxed mb-6" style="color: var(--text-body);">{t("commitment_description")}</p>
 
         <div
           data-aos="fade-up"
@@ -124,11 +130,11 @@ const t = useTranslations(lang);
           <a
             href={`/cv-alipori-${lang}.pdf`}
             target="_blank"
-            class="group inline-flex items-center justify-center px-6 py-3 text-base font-bold text-white transition-all duration-300 bg-brand rounded-xl hover:bg-brand-dark hover:scale-105 shadow-lg"
+            class="group inline-flex items-center justify-center px-6 py-3 text-base font-bold text-gray-900 transition-colors duration-300 bg-white hover:bg-white/80 rounded-xl"
           >
             <span class="flex items-center gap-3">
               <svg
-                class="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-0.5"
+                class="w-5 h-5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

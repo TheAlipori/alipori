@@ -22,14 +22,12 @@ const translatedPath = useTranslatedPath(lang);
     <div class="text-center md:text-left md:w-1/2 z-10">
       <div data-aos="zoom-in-right" data-aos-duration="2000">
         <h1
-          class="text-4xl md:text-6xl lg:text-5xl font-bold mb-4 md:mb-6 text-gray-900"
+          class="text-4xl md:text-6xl lg:text-5xl font-bold mb-4 md:mb-6 text-white"
         >
           {t("title")}
         </h1>
 
-        <p
-          class="text-lg md:text-xl text-gray-600 mb-6 md:mb-8 max-w-xl mx-auto md:mx-0"
-        >
+        <p class="text-lg md:text-xl mb-6 md:mb-8 max-w-xl mx-auto md:mx-0">
           {t("description")}
         </p>
       </div>
@@ -41,14 +39,14 @@ const translatedPath = useTranslatedPath(lang);
       >
         <a
           href="https://wa.me/5216182184762"
-          class="w-auto inline-flex items-center justify-center space-x-2 bg-brand hover:bg-brand-dark text-white py-4 px-8 rounded-3xl transition-all duration-300 transform hover:scale-105 shadow-lg"
+          class="w-auto inline-flex items-center justify-center space-x-2 bg-white hover:bg-gray-200 text-black py-4 px-8 rounded-3xl transition-all duration-300 transform"
         >
           <span class="text-center">{t("button1")}</span>
         </a>
 
         <a
           href="#aboutme"
-          class="w-auto inline-flex items-center justify-center border-2 border-brand hover:border-brand-dark bg-transparent hover:bg-brand-light/40 text-brand hover:text-brand-dark py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
+          class="w-auto inline-flex items-center justify-center py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
         >
           <span class="text-center">{t("button2")}</span>
         </a>
@@ -72,8 +70,12 @@ const translatedPath = useTranslatedPath(lang);
   </div>
 
   {/* Scroll Indicator */}
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
-    <span class="text-xs tracking-widest uppercase font-medium scroll-label">Scroll</span>
+  <div
+    class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
+  >
+    <span class="text-xs tracking-widest uppercase font-medium scroll-label"
+      >Scroll</span
+    >
     <div class="scroll-mouse">
       <div class="scroll-dot"></div>
     </div>
@@ -82,7 +84,7 @@ const translatedPath = useTranslatedPath(lang);
 
 <style>
   .scroll-label {
-    color: theme('colors.brand.DEFAULT');
+    color: #ffffff;
     opacity: 0.7;
     animation: fade-label 2s ease-in-out infinite;
   }
@@ -90,31 +92,45 @@ const translatedPath = useTranslatedPath(lang);
   .scroll-mouse {
     width: 26px;
     height: 42px;
-    border: 2px solid theme('colors.brand.DEFAULT');
+    border: 2px solid rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     display: flex;
     justify-content: center;
     padding-top: 6px;
     opacity: 0.8;
-    box-shadow: 0 0 12px theme('colors.brand.light');
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
   }
 
   .scroll-dot {
     width: 4px;
     height: 8px;
-    background: linear-gradient(to bottom, theme('colors.brand.DEFAULT'), theme('colors.brand.dark'));
+    background: #ffffff;
     border-radius: 9999px;
     animation: scroll-dot 2s ease-in-out infinite;
   }
 
   @keyframes scroll-dot {
-    0%   { transform: translateY(0);   opacity: 1; }
-    60%  { transform: translateY(12px); opacity: 0.2; }
-    100% { transform: translateY(0);   opacity: 1; }
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    60% {
+      transform: translateY(12px);
+      opacity: 0.2;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   @keyframes fade-label {
-    0%, 100% { opacity: 0.5; }
-    50%       { opacity: 1; }
+    0%,
+    100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
   }
 </style>

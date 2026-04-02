@@ -15,7 +15,7 @@ const t = useTranslations(lang);
       data-aos="fade-down"
       data-aos-duration="1000"
       data-aos-easing="ease-out-cubic"
-      class="max-w-lg mx-auto text-gray-500 mt-4 text-lg font-bold"
+      class="max-w-lg mx-auto mt-4 text-lg font-bold text-white"
     >
       {t("whyme1")}
     </h2>
@@ -23,7 +23,7 @@ const t = useTranslations(lang);
       data-aos="zoom-in"
       data-aos-duration="1000"
       data-aos-easing="ease-out-cubic"
-      class="block w-full text-gray-900 font-bold text-4xl md:text-6xl"
+      class="block w-full text-white font-bold text-4xl md:text-6xl"
     >
       {t("whyme2")}
     </h2>
@@ -36,13 +36,11 @@ const t = useTranslations(lang);
       data-aos-easing="ease-out-cubic"
       class="relative pl-9 animate-fade-in-up scroll-trigger group cursor-default"
     >
-      <div class="inline font-bold text-gray-900 text-base/7 lg:text-lg/7">
-        <MessageIcon
-          class="absolute left-1 top-1 size-5 text-brand group-hover:text-brand-mid"
-        />
+      <div class="inline font-bold text-white text-base/7 lg:text-lg/7">
+        <MessageIcon class="absolute left-1 top-1 size-5" />
         {t("whyme3")}
       </div>
-      <p class="inline text-base/7 lg:text-lg/7 text-gray-600">
+      <p class="inline text-base/7 lg:text-lg/7">
         {t("whyme4")}
       </p>
     </div>
@@ -53,12 +51,10 @@ const t = useTranslations(lang);
       data-aos-easing="ease-out-cubic"
       class="relative pl-9 animate-fade-in-up scroll-trigger group cursor-default"
     >
-      <div class="inline font-bold text-gray-900 text-base/7 lg:text-lg/7">
-        <RocketIcon
-          class="absolute left-1 top-1 size-5 text-brand group-hover:text-brand-mid"
-        />
+      <div class="inline font-bold text-white text-base/7 lg:text-lg/7">
+        <RocketIcon class="absolute left-1 top-1 size-5" />
         {t("whyme5")}
-        <p class="font-normal inline text-base/7 lg:text-lg/7 text-gray-600">
+        <p class="font-normal inline text-base/7 lg:text-lg/7">
           {t("whyme6")}
         </p>
       </div>
@@ -70,12 +66,10 @@ const t = useTranslations(lang);
       data-aos-easing="ease-out-cubic"
       class="relative pl-9 animate-fade-in-up scroll-trigger group cursor-default"
     >
-      <div class="inline font-bold text-gray-900 text-base/7 lg:text-lg/7">
-        <PlanetIcon
-          class="absolute left-1 top-1 size-5 text-brand group-hover:text-brand-mid"
-        />
+      <div class="inline font-bold text-white text-base/7 lg:text-lg/7">
+        <PlanetIcon class="absolute left-1 top-1 size-5" />
         {t("whyme7")}
-        <p class="font-normal inline text-base/7 lg:text-lg/7 text-gray-600">
+        <p class="font-normal inline text-base/7 lg:text-lg/7">
           {t("whyme8")}
         </p>
       </div>
@@ -87,15 +81,19 @@ const t = useTranslations(lang);
       data-aos-duration="1000"
       data-aos-easing="ease-out-cubic"
     >
-      <div class="inline font-bold text-gray-900 text-base/7 lg:text-lg/7">
-        <TargetIcon
-          class="absolute left-1 top-1 size-5 text-brand group-hover:text-brand-mid"
-        />
+      <div class="inline font-bold text-white text-base/7 lg:text-lg/7">
+        <TargetIcon class="absolute left-1 top-1 size-5" />
         {t("whyme9")}
       </div>
-      <p class="font-normal inline text-base/7 lg:text-lg/7 text-gray-600">
+      <p class="font-normal inline text-base/7 lg:text-lg/7">
         {t("whyme10")}
       </p>
     </div>
   </div>
 </section>
+
+<style>
+  p {
+    color: var(--text-body);
+  }
+</style>
