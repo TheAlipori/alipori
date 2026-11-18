@@ -24,9 +24,8 @@ const t = useTranslations(lang);
       </p>
     </div>
 
-    <!-- Content Grid -->
-    <div class="grid lg:grid-cols-3 gap-8">
-      <!-- Education Card -->
+    <!-- Education Card -->
+    <div class="max-w-xl mx-auto">
       <div
         data-aos="fade-up"
         data-aos-duration="1000"
@@ -50,58 +49,6 @@ const t = useTranslations(lang);
           <div>
             <h4 class="text-sm font-medium text-white/70 mb-1">{t("specialization_title")}</h4>
             <p class="text-sm" style="color: var(--text-body);">{t("specialization_description")}</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Gaming Card -->
-      <div
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="400"
-        class="rounded-2xl p-8 backdrop-blur-xl transition-all duration-300"
-        style="background: linear-gradient(140deg, rgba(175,190,255,0.05), rgba(175,190,255,0.20));"
-      >
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.01M15 10h1.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white">{t("gaming_title")}</h3>
-        </div>
-        <div class="space-y-4">
-          <p class="leading-relaxed" style="color: var(--text-body);">{t("gaming_description")}</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-white/10 text-white text-sm rounded-full">{t("gaming_skill1")}</span>
-            <span class="px-3 py-1 bg-white/10 text-white text-sm rounded-full">{t("gaming_skill2")}</span>
-            <span class="px-3 py-1 bg-white/10 text-white text-sm rounded-full">{t("gaming_skill3")}</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hiking Card -->
-      <div
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="600"
-        class="rounded-2xl p-8 backdrop-blur-xl transition-all duration-300"
-        style="background: linear-gradient(140deg, rgba(175,190,255,0.05), rgba(175,190,255,0.20));"
-      >
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white">{t("hiking_title")}</h3>
-        </div>
-        <div class="space-y-4">
-          <p class="leading-relaxed" style="color: var(--text-body);">{t("hiking_description")}</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-white/10 text-white text-sm rounded-full">{t("hiking_skill1")}</span>
-            <span class="px-3 py-1 bg-white/10 text-white text-sm rounded-full">{t("hiking_skill2")}</span>
-            <span class="px-3 py-1 bg-white/10 text-white text-sm rounded-full">{t("hiking_skill3")}</span>
           </div>
         </div>
       </div>

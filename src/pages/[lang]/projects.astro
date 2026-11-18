@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import PortfolioHero from "../../components/PortfolioHero.astro";
 import CaseStudy from "../../components/CaseStudy.astro";
+import GraphicDesign from "../../components/GraphicDesign.astro";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import CallToAction from "../../components/CallToAction.astro";
 const lang = getLangFromUrl(Astro.url);
@@ -49,6 +50,8 @@ const t = useTranslations(lang);
   />
 
   <!-- Add more case studies here -->
+
+  <GraphicDesign />
 
   <CallToAction />
 </Layout>
