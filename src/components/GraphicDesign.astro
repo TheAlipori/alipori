@@ -1,0 +1,82 @@
+---
+import "photoswipe/style.css";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import fs from "node:fs";
+import path from "node:path";
+import sharp from "sharp";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const publicDir = path.resolve("./public");
+const filenames = fs
+  .readdirSync(publicDir)
+  .filter((f) => /^graphic-\d+\.webp$/.test(f))
+  .sort((a, b) => {
+    const numA = parseInt(a.match(/\d+/)?.[0] ?? "0");
+    const numB = parseInt(b.match(/\d+/)?.[0] ?? "0");
+    return numA - numB;
+  });
+
+const images = await Promise.all(
+  filenames.map(async (filename) => {
+    const { width, height } = await sharp(path.join(publicDir, filename)).metadata();
+    return { filename, width: width ?? 1000, height: height ?? 1000 };
+  })
+);
+---
+
+<section class="py-20 px-4">
+  <div class="relative mx-auto max-w-5xl text-center mb-16">
+    <h2
+      data-aos="fade-down"
+      data-aos-duration="1000"
+      class="text-white font-bold text-4xl md:text-6xl mb-4"
+    >
+      {t("graphic_design_title")}
+    </h2>
+    <p
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      class="mx-auto max-w-xl text-lg leading-relaxed"
+      style="color: var(--text-body);"
+    >
+      {t("graphic_design_subtitle")}
+    </p>
+  </div>
+
+  <div
+    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto"
+    id="gallery-design"
+  >
+    {
+      images.map(({ filename, width, height }, i) => (
+        <a
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay={`${(i % 4) * 100}`}
+          class="aspect-square rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300 shadow-xl shadow-sky-300/10 hover:shadow-2xl hover:shadow-sky-300/30"
+          href={`/${filename}`}
+          data-pswp-width={width}
+          data-pswp-height={height}
+        >
+          <img
+            src={`/${filename}`}
+            alt={`${t("graphic_design_title")} ${i + 1}`}
+            class="w-full h-full object-cover"
+          />
+        </a>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  import PhotoSwipeLightbox from "photoswipe/lightbox";
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: "#gallery-design",
+    children: "a",
+    pswpModule: () => import("photoswipe"),
+  });
+  lightbox.init();
+</script>
